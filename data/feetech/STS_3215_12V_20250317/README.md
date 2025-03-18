@@ -1,32 +1,8 @@
-# Dataset: STS_3215_V12_20250317
-
-## Testbench Setup: Pendulum
-- **Actuator**: STS3215 (12V)
-- **Test Date**: 2025-03-17
-- **Sampling Rate**: 100 Hz (interpolated to 200 Hz)
-- **Total Experimental Runs**: 960
-- **Arm Lengths**: 100 mm, 150 mm
-- **Point Masses**: 0.535 kg, 0.741 kg, 0.969 kg, 1.168 kg
-- **KP Gains**: 4, 8, 12, 16, 24, 32
-- **Trajectory Types**:
-  - Brutal (Large Step Input)
-  - SinSin
-  - SinTimeSquared
-  - Up and Down
-  - Lift and Drop
-- **Repetitions**: 4
-
-## Data Processing Notes
-- Data was linearly interpolated from 100 Hz to 200 Hz.
-- Specific segments with artifacts, oscillations, or dead zones were trimmed (see details per fitting).
-
----
-
 ## Actuator Error Gain Measurement
 
 To accurately simulate actuator behavior, an `error_gain` parameter was measured. This parameter helps calculate the motor duty cycle during simulation using the following control law:
 
-\[ \text{duty cycle} = K_P \times \text{error\_gain} \times \text{position\_error} \]
+```duty cycle = K_P * error_gain * position_error ```
 
 ### Measurement Setup
 - Motor leads decoupled
@@ -68,6 +44,29 @@ Error (rad) | Error Gain
 ![Scope Measuring Response](https://github.com/user-attachments/assets/c04c8f17-aaa0-405b-b30a-34d434e18712)
 
 
+# Dataset: STS_3215_V12_20250317
+
+## Testbench Setup: Pendulum
+- **Actuator**: STS3215 (12V)
+- **Test Date**: 2025-03-17
+- **Sampling Rate**: 100 Hz (interpolated to 200 Hz)
+- **Total Experimental Runs**: 960
+- **Arm Lengths**: 100 mm, 150 mm
+- **Point Masses**: 0.535 kg, 0.741 kg, 0.969 kg, 1.168 kg
+- **KP Gains**: 4, 8, 12, 16, 24, 32
+- **Trajectory Types**:
+  - Brutal (Large Step Input)
+  - SinSin
+  - SinTimeSquared
+  - Up and Down
+  - Lift and Drop
+- **Repetitions**: 4
+
+## Data Processing Notes
+- Data was linearly interpolated from 100 Hz to 200 Hz.
+- Specific segments with artifacts, oscillations, or dead zones were trimmed (see details per fitting).
+
+---
 
 ## Model Fitting Results
 
