@@ -22,6 +22,49 @@
 
 ---
 
+## Actuator Error Gain Measurement
+
+To accurately simulate actuator behavior, an `error_gain` parameter was measured. This parameter helps calculate the motor duty cycle during simulation using the following control law:
+
+\[ \text{duty cycle} = K_P \times \text{error\_gain} \times \text{position\_error} \]
+
+### Measurement Setup
+- Motor leads decoupled
+- Control gains: \( K_P = 32 \), \( K_I = 0 \), \( K_D = 0 \)
+- Step inputs of varying magnitude applied to measure the control response
+
+### Measured Data
+
+| Error (rad) | Error Gain |
+|-------------|------------|
+| 7           | 0.190817864|
+| 11          | 0.180332945|
+| 25          | 0.170559543|
+| 50          | 0.160778986|
+| 75          | 0.165436394|
+| 85          | 0.165131559|
+| 90          | 0.164977213|
+| 95          | **0.164890901**|
+| 100         | 0.041021272|
+| 111         | 0.036942805|
+
+**Selected Error Gain**: **0.164890901** (chosen based on stable region before duty cycle drop-off due to torque limit protection)
+
+Error (rad) | Error Gain
+------------|-----------------------------------------
+7           | ██████████████████████████ 0.1908
+11          | ████████████████████████   0.1803
+25          | ██████████████████████     0.1706
+50          | ████████████████████       0.1608
+75          | ████████████████████▌      0.1654
+85          | ████████████████████▌      0.1651
+90          | ████████████████████▌      0.16498
+95          | ████████████████████▌      (Selected: 0.1649)
+100         | ████                       0.0410
+111         | ███▌                       0.0369
+
+
+
 ## Model Fitting Results
 
 ### LuGre Model (Full Friction Dynamics, Model M6)
