@@ -1,6 +1,6 @@
 # Dataset: STS_3215_V12_20250317
 
-## Testbench Setup
+## Testbench Setup: Pendulum
 - **Actuator**: STS3215 (12V)
 - **Test Date**: 2025-03-17
 - **Sampling Rate**: 100 Hz (interpolated to 200 Hz)
