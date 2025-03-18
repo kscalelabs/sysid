@@ -63,6 +63,10 @@ Error (rad) | Error Gain
 100         | ████                       0.0410
 111         | ███▌                       0.0369
 
+![Error Gain as a function of Position Error](https://github.com/user-attachments/assets/54fc45d7-d1d5-4d2a-b71f-9f9cee1050a7)
+
+![Scope Measuring Response](https://github.com/user-attachments/assets/c04c8f17-aaa0-405b-b30a-34d434e18712)
+
 
 
 ## Model Fitting Results
