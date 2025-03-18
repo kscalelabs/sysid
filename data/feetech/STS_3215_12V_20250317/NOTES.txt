@@ -1,0 +1,1241 @@
+--------------------------------
+Dataset = STS_3215_V12_20250317
+
+Testbench: Pendulum 
+
+Actuator: STS3215 12v
+
+Date: 2025-03-17
+
+Experimental Runs:
+    Total = 960
+    Sampling Rate = 100hz
+    Arm Lengths = 100mm, 150mm
+    Point Mass = 1lb, 1.5lb, 2lb, 2.5lb 
+    KP = 4, 8, 12, 16, 24, 32
+    Trajectories
+        Brutal (Large Step Input)
+        SinSin
+        SinTimeSquared
+        Up and Down ( Slow Upward motion, lower slightly and hold, return to zero)
+        Lift and Drop
+    Repetitions = 4
+---------------------------------
+
+=== System ID Experiment Summary ===
+Total unique configurations: 8
+--------------------------------------------------
+Mass:  0.535 kg, Length:  0.100 m
+Number of experiments: 120
+Files:
+sysid_sts3215_brutal_2025-03-17_184857.json
+sysid_sts3215_sin_time_square_2025-03-17_184509.json
+sysid_sts3215_brutal_2025-03-17_184800.json
+sysid_sts3215_brutal_2025-03-17_184953.json
+sysid_sts3215_sin_time_square_2025-03-17_184231.json
+sysid_sts3215_up_and_down_2025-03-17_184145.json
+sysid_sts3215_sin_sin_2025-03-17_183650.json
+sysid_sts3215_sin_sin_2025-03-17_183627.json
+sysid_sts3215_sin_sin_2025-03-17_183735.json
+sysid_sts3215_brutal_2025-03-17_184748.json
+sysid_sts3215_sin_time_square_2025-03-17_184339.json
+sysid_sts3215_sin_time_square_2025-03-17_184544.json
+sysid_sts3215_sin_time_square_2025-03-17_184401.json
+sysid_sts3215_brutal_2025-03-17_184908.json
+sysid_sts3215_lift_and_drop_2025-03-17_183057.json
+sysid_sts3215_sin_sin_2025-03-17_183348.json
+sysid_sts3215_brutal_2025-03-17_185027.json
+sysid_sts3215_sin_sin_2025-03-17_183519.json
+sysid_sts3215_lift_and_drop_2025-03-17_182851.json
+sysid_sts3215_up_and_down_2025-03-17_184037.json
+sysid_sts3215_lift_and_drop_2025-03-17_183217.json
+sysid_sts3215_lift_and_drop_2025-03-17_182902.json
+sysid_sts3215_sin_time_square_2025-03-17_184640.json
+sysid_sts3215_lift_and_drop_2025-03-17_183240.json
+sysid_sts3215_up_and_down_2025-03-17_183906.json
+sysid_sts3215_up_and_down_2025-03-17_183843.json
+sysid_sts3215_lift_and_drop_2025-03-17_183108.json
+sysid_sts3215_up_and_down_2025-03-17_183855.json
+sysid_sts3215_sin_sin_2025-03-17_183542.json
+sysid_sts3215_sin_time_square_2025-03-17_184532.json
+sysid_sts3215_lift_and_drop_2025-03-17_182959.json
+sysid_sts3215_sin_sin_2025-03-17_183411.json
+sysid_sts3215_brutal_2025-03-17_185050.json
+sysid_sts3215_up_and_down_2025-03-17_184026.json
+sysid_sts3215_sin_sin_2025-03-17_183508.json
+sysid_sts3215_up_and_down_2025-03-17_184134.json
+sysid_sts3215_sin_time_square_2025-03-17_184305.json
+sysid_sts3215_up_and_down_2025-03-17_184122.json
+sysid_sts3215_sin_time_square_2025-03-17_184606.json
+sysid_sts3215_lift_and_drop_2025-03-17_183251.json
+sysid_sts3215_lift_and_drop_2025-03-17_182913.json
+sysid_sts3215_lift_and_drop_2025-03-17_183314.json
+sysid_sts3215_lift_and_drop_2025-03-17_183154.json
+sysid_sts3215_brutal_2025-03-17_185124.json
+sysid_sts3215_lift_and_drop_2025-03-17_183011.json
+sysid_sts3215_up_and_down_2025-03-17_183809.json
+sysid_sts3215_lift_and_drop_2025-03-17_183142.json
+sysid_sts3215_brutal_2025-03-17_184703.json
+sysid_sts3215_sin_sin_2025-03-17_183553.json
+sysid_sts3215_lift_and_drop_2025-03-17_182948.json
+sysid_sts3215_sin_sin_2025-03-17_183400.json
+sysid_sts3215_brutal_2025-03-17_185016.json
+sysid_sts3215_up_and_down_2025-03-17_183940.json
+sysid_sts3215_lift_and_drop_2025-03-17_182925.json
+sysid_sts3215_sin_sin_2025-03-17_183713.json
+sysid_sts3215_brutal_2025-03-17_184811.json
+sysid_sts3215_sin_sin_2025-03-17_183616.json
+sysid_sts3215_brutal_2025-03-17_184942.json
+sysid_sts3215_brutal_2025-03-17_184714.json
+sysid_sts3215_sin_sin_2025-03-17_183456.json
+sysid_sts3215_brutal_2025-03-17_185113.json
+sysid_sts3215_sin_time_square_2025-03-17_184555.json
+sysid_sts3215_brutal_2025-03-17_184919.json
+sysid_sts3215_sin_time_square_2025-03-17_184447.json
+sysid_sts3215_sin_sin_2025-03-17_183724.json
+sysid_sts3215_up_and_down_2025-03-17_183832.json
+sysid_sts3215_lift_and_drop_2025-03-17_183303.json
+sysid_sts3215_sin_sin_2025-03-17_183434.json
+sysid_sts3215_sin_sin_2025-03-17_183530.json
+sysid_sts3215_sin_time_square_2025-03-17_184413.json
+sysid_sts3215_brutal_2025-03-17_184737.json
+sysid_sts3215_lift_and_drop_2025-03-17_183228.json
+sysid_sts3215_sin_sin_2025-03-17_183422.json
+sysid_sts3215_sin_time_square_2025-03-17_184242.json
+sysid_sts3215_sin_time_square_2025-03-17_184350.json
+sysid_sts3215_sin_time_square_2025-03-17_184327.json
+sysid_sts3215_brutal_2025-03-17_184845.json
+sysid_sts3215_up_and_down_2025-03-17_184100.json
+sysid_sts3215_sin_sin_2025-03-17_183639.json
+sysid_sts3215_sin_time_square_2025-03-17_184521.json
+sysid_sts3215_sin_time_square_2025-03-17_184424.json
+sysid_sts3215_lift_and_drop_2025-03-17_183120.json
+sysid_sts3215_brutal_2025-03-17_185039.json
+sysid_sts3215_up_and_down_2025-03-17_184156.json
+sysid_sts3215_sin_sin_2025-03-17_183747.json
+sysid_sts3215_sin_sin_2025-03-17_183337.json
+sysid_sts3215_up_and_down_2025-03-17_183758.json
+sysid_sts3215_up_and_down_2025-03-17_184208.json
+sysid_sts3215_lift_and_drop_2025-03-17_183205.json
+sysid_sts3215_sin_time_square_2025-03-17_184652.json
+sysid_sts3215_lift_and_drop_2025-03-17_183045.json
+sysid_sts3215_up_and_down_2025-03-17_184048.json
+sysid_sts3215_sin_time_square_2025-03-17_184629.json
+sysid_sts3215_up_and_down_2025-03-17_183918.json
+sysid_sts3215_sin_time_square_2025-03-17_184458.json
+sysid_sts3215_sin_sin_2025-03-17_183605.json
+sysid_sts3215_up_and_down_2025-03-17_183952.json
+sysid_sts3215_up_and_down_2025-03-17_184014.json
+sysid_sts3215_sin_sin_2025-03-17_183701.json
+sysid_sts3215_sin_time_square_2025-03-17_184435.json
+sysid_sts3215_lift_and_drop_2025-03-17_183131.json
+sysid_sts3215_up_and_down_2025-03-17_183929.json
+sysid_sts3215_sin_time_square_2025-03-17_184618.json
+sysid_sts3215_sin_sin_2025-03-17_183445.json
+sysid_sts3215_brutal_2025-03-17_184822.json
+sysid_sts3215_up_and_down_2025-03-17_183821.json
+sysid_sts3215_sin_sin_2025-03-17_183326.json
+sysid_sts3215_up_and_down_2025-03-17_184219.json
+sysid_sts3215_brutal_2025-03-17_184834.json
+sysid_sts3215_sin_time_square_2025-03-17_184316.json
+sysid_sts3215_brutal_2025-03-17_184931.json
+sysid_sts3215_sin_time_square_2025-03-17_184253.json
+sysid_sts3215_brutal_2025-03-17_184726.json
+sysid_sts3215_lift_and_drop_2025-03-17_183022.json
+sysid_sts3215_brutal_2025-03-17_185005.json
+sysid_sts3215_brutal_2025-03-17_185101.json
+sysid_sts3215_lift_and_drop_2025-03-17_183034.json
+sysid_sts3215_lift_and_drop_2025-03-17_182936.json
+sysid_sts3215_up_and_down_2025-03-17_184003.json
+sysid_sts3215_up_and_down_2025-03-17_184111.json
+--------------------------------------------------
+Mass:  0.535 kg, Length:  0.150 m
+Number of experiments: 120
+Files:
+sysid_sts3215_lift_and_drop_2025-03-17_185819.json
+sysid_sts3215_sin_time_square_2025-03-17_191232.json
+sysid_sts3215_up_and_down_2025-03-17_191039.json
+sysid_sts3215_sin_sin_2025-03-17_190640.json
+sysid_sts3215_lift_and_drop_2025-03-17_185927.json
+sysid_sts3215_lift_and_drop_2025-03-17_185950.json
+sysid_sts3215_brutal_2025-03-17_191858.json
+sysid_sts3215_brutal_2025-03-17_192018.json
+sysid_sts3215_sin_sin_2025-03-17_190436.json
+sysid_sts3215_sin_sin_2025-03-17_190532.json
+sysid_sts3215_sin_time_square_2025-03-17_191341.json
+sysid_sts3215_up_and_down_2025-03-17_190737.json
+sysid_sts3215_sin_time_square_2025-03-17_191244.json
+sysid_sts3215_sin_time_square_2025-03-17_191511.json
+sysid_sts3215_sin_time_square_2025-03-17_191403.json
+sysid_sts3215_sin_time_square_2025-03-17_191415.json
+sysid_sts3215_sin_sin_2025-03-17_190231.json
+sysid_sts3215_brutal_2025-03-17_191654.json
+sysid_sts3215_brutal_2025-03-17_191750.json
+sysid_sts3215_up_and_down_2025-03-17_190845.json
+sysid_sts3215_sin_time_square_2025-03-17_191136.json
+sysid_sts3215_brutal_2025-03-17_191642.json
+sysid_sts3215_sin_sin_2025-03-17_190339.json
+sysid_sts3215_sin_sin_2025-03-17_190544.json
+sysid_sts3215_sin_sin_2025-03-17_190401.json
+sysid_sts3215_brutal_2025-03-17_191802.json
+sysid_sts3215_lift_and_drop_2025-03-17_190122.json
+sysid_sts3215_brutal_2025-03-17_191910.json
+sysid_sts3215_up_and_down_2025-03-17_190652.json
+sysid_sts3215_up_and_down_2025-03-17_190823.json
+sysid_sts3215_sin_time_square_2025-03-17_191500.json
+sysid_sts3215_up_and_down_2025-03-17_190931.json
+sysid_sts3215_sin_time_square_2025-03-17_191306.json
+sysid_sts3215_brutal_2025-03-17_191921.json
+sysid_sts3215_up_and_down_2025-03-17_190726.json
+sysid_sts3215_sin_time_square_2025-03-17_191255.json
+sysid_sts3215_brutal_2025-03-17_191608.json
+sysid_sts3215_sin_time_square_2025-03-17_191449.json
+sysid_sts3215_up_and_down_2025-03-17_191005.json
+sysid_sts3215_lift_and_drop_2025-03-17_190133.json
+sysid_sts3215_sin_sin_2025-03-17_190555.json
+sysid_sts3215_brutal_2025-03-17_191813.json
+sysid_sts3215_sin_sin_2025-03-17_190447.json
+sysid_sts3215_brutal_2025-03-17_191716.json
+sysid_sts3215_sin_sin_2025-03-17_190305.json
+sysid_sts3215_sin_sin_2025-03-17_190606.json
+sysid_sts3215_up_and_down_2025-03-17_191028.json
+sysid_sts3215_brutal_2025-03-17_191557.json
+sysid_sts3215_lift_and_drop_2025-03-17_190036.json
+sysid_sts3215_lift_and_drop_2025-03-17_185756.json
+sysid_sts3215_brutal_2025-03-17_191824.json
+sysid_sts3215_lift_and_drop_2025-03-17_190145.json
+sysid_sts3215_sin_time_square_2025-03-17_191147.json
+sysid_sts3215_up_and_down_2025-03-17_190834.json
+sysid_sts3215_lift_and_drop_2025-03-17_185916.json
+sysid_sts3215_lift_and_drop_2025-03-17_185853.json
+sysid_sts3215_sin_sin_2025-03-17_190424.json
+sysid_sts3215_lift_and_drop_2025-03-17_190111.json
+sysid_sts3215_lift_and_drop_2025-03-17_185939.json
+sysid_sts3215_lift_and_drop_2025-03-17_185807.json
+sysid_sts3215_up_and_down_2025-03-17_190749.json
+sysid_sts3215_sin_time_square_2025-03-17_191534.json
+sysid_sts3215_sin_time_square_2025-03-17_191426.json
+sysid_sts3215_up_and_down_2025-03-17_191050.json
+sysid_sts3215_sin_sin_2025-03-17_190629.json
+sysid_sts3215_brutal_2025-03-17_192006.json
+sysid_sts3215_up_and_down_2025-03-17_191102.json
+sysid_sts3215_brutal_2025-03-17_191739.json
+sysid_sts3215_sin_time_square_2025-03-17_191221.json
+sysid_sts3215_sin_sin_2025-03-17_190413.json
+sysid_sts3215_brutal_2025-03-17_191955.json
+sysid_sts3215_brutal_2025-03-17_191847.json
+sysid_sts3215_lift_and_drop_2025-03-17_190059.json
+sysid_sts3215_up_and_down_2025-03-17_190953.json
+sysid_sts3215_sin_time_square_2025-03-17_191523.json
+sysid_sts3215_sin_sin_2025-03-17_190242.json
+sysid_sts3215_up_and_down_2025-03-17_190800.json
+sysid_sts3215_lift_and_drop_2025-03-17_185830.json
+sysid_sts3215_sin_sin_2025-03-17_190350.json
+sysid_sts3215_sin_time_square_2025-03-17_191124.json
+sysid_sts3215_up_and_down_2025-03-17_190857.json
+sysid_sts3215_sin_sin_2025-03-17_190327.json
+sysid_sts3215_sin_time_square_2025-03-17_191329.json
+sysid_sts3215_brutal_2025-03-17_191631.json
+sysid_sts3215_sin_time_square_2025-03-17_191352.json
+sysid_sts3215_up_and_down_2025-03-17_190908.json
+sysid_sts3215_sin_sin_2025-03-17_190521.json
+sysid_sts3215_lift_and_drop_2025-03-17_190002.json
+sysid_sts3215_sin_sin_2025-03-17_190219.json
+sysid_sts3215_lift_and_drop_2025-03-17_190048.json
+sysid_sts3215_sin_time_square_2025-03-17_191318.json
+sysid_sts3215_up_and_down_2025-03-17_190942.json
+sysid_sts3215_up_and_down_2025-03-17_190811.json
+sysid_sts3215_sin_sin_2025-03-17_190316.json
+sysid_sts3215_sin_sin_2025-03-17_190253.json
+sysid_sts3215_lift_and_drop_2025-03-17_190025.json
+sysid_sts3215_up_and_down_2025-03-17_191113.json
+sysid_sts3215_brutal_2025-03-17_191728.json
+sysid_sts3215_lift_and_drop_2025-03-17_190208.json
+sysid_sts3215_brutal_2025-03-17_191944.json
+sysid_sts3215_sin_sin_2025-03-17_190510.json
+sysid_sts3215_sin_time_square_2025-03-17_191158.json
+sysid_sts3215_up_and_down_2025-03-17_190714.json
+sysid_sts3215_up_and_down_2025-03-17_190919.json
+sysid_sts3215_lift_and_drop_2025-03-17_190013.json
+sysid_sts3215_lift_and_drop_2025-03-17_190156.json
+sysid_sts3215_sin_time_square_2025-03-17_191210.json
+sysid_sts3215_sin_time_square_2025-03-17_191545.json
+sysid_sts3215_brutal_2025-03-17_191620.json
+sysid_sts3215_sin_sin_2025-03-17_190458.json
+sysid_sts3215_lift_and_drop_2025-03-17_185841.json
+sysid_sts3215_lift_and_drop_2025-03-17_185904.json
+sysid_sts3215_brutal_2025-03-17_191836.json
+sysid_sts3215_lift_and_drop_2025-03-17_185744.json
+sysid_sts3215_brutal_2025-03-17_191932.json
+sysid_sts3215_sin_sin_2025-03-17_190618.json
+sysid_sts3215_up_and_down_2025-03-17_191016.json
+sysid_sts3215_up_and_down_2025-03-17_190703.json
+sysid_sts3215_brutal_2025-03-17_191705.json
+sysid_sts3215_sin_time_square_2025-03-17_191437.json
+--------------------------------------------------
+Mass:  0.741 kg, Length:  0.100 m
+Number of experiments: 120
+Files:
+sysid_sts3215_brutal_2025-03-17_175439.json
+sysid_sts3215_brutal_2025-03-17_175655.json
+sysid_sts3215_up_and_down_2025-03-17_174556.json
+sysid_sts3215_up_and_down_2025-03-17_174813.json
+sysid_sts3215_brutal_2025-03-17_175643.json
+sysid_sts3215_sin_time_square_2025-03-17_175137.json
+sysid_sts3215_brutal_2025-03-17_175706.json
+sysid_sts3215_sin_sin_2025-03-17_174050.json
+sysid_sts3215_brutal_2025-03-17_175803.json
+sysid_sts3215_up_and_down_2025-03-17_174653.json
+sysid_sts3215_up_and_down_2025-03-17_174716.json
+sysid_sts3215_sin_sin_2025-03-17_174135.json
+sysid_sts3215_up_and_down_2025-03-17_174448.json
+sysid_sts3215_lift_and_drop_2025-03-17_173941.json
+sysid_sts3215_sin_sin_2025-03-17_174027.json
+sysid_sts3215_sin_time_square_2025-03-17_175029.json
+sysid_sts3215_sin_time_square_2025-03-17_175245.json
+sysid_sts3215_lift_and_drop_2025-03-17_173541.json
+sysid_sts3215_lift_and_drop_2025-03-17_173701.json
+sysid_sts3215_sin_sin_2025-03-17_174158.json
+sysid_sts3215_sin_time_square_2025-03-17_175052.json
+sysid_sts3215_up_and_down_2025-03-17_174608.json
+sysid_sts3215_up_and_down_2025-03-17_174824.json
+sysid_sts3215_lift_and_drop_2025-03-17_173604.json
+sysid_sts3215_lift_and_drop_2025-03-17_173844.json
+sysid_sts3215_sin_sin_2025-03-17_174437.json
+sysid_sts3215_brutal_2025-03-17_175814.json
+sysid_sts3215_brutal_2025-03-17_175547.json
+sysid_sts3215_lift_and_drop_2025-03-17_173649.json
+sysid_sts3215_lift_and_drop_2025-03-17_173833.json
+sysid_sts3215_up_and_down_2025-03-17_174500.json
+sysid_sts3215_up_and_down_2025-03-17_174858.json
+sysid_sts3215_sin_sin_2025-03-17_174426.json
+sysid_sts3215_brutal_2025-03-17_175632.json
+sysid_sts3215_up_and_down_2025-03-17_174835.json
+sysid_sts3215_lift_and_drop_2025-03-17_173615.json
+sysid_sts3215_up_and_down_2025-03-17_174511.json
+sysid_sts3215_sin_time_square_2025-03-17_174921.json
+sysid_sts3215_sin_time_square_2025-03-17_175234.json
+sysid_sts3215_brutal_2025-03-17_175405.json
+sysid_sts3215_sin_time_square_2025-03-17_175222.json
+sysid_sts3215_lift_and_drop_2025-03-17_173930.json
+sysid_sts3215_brutal_2025-03-17_175501.json
+sysid_sts3215_sin_sin_2025-03-17_174329.json
+sysid_sts3215_sin_time_square_2025-03-17_175331.json
+sysid_sts3215_sin_sin_2025-03-17_174112.json
+sysid_sts3215_up_and_down_2025-03-17_174750.json
+sysid_sts3215_up_and_down_2025-03-17_174642.json
+sysid_sts3215_sin_sin_2025-03-17_174016.json
+sysid_sts3215_brutal_2025-03-17_175740.json
+sysid_sts3215_sin_time_square_2025-03-17_175126.json
+sysid_sts3215_lift_and_drop_2025-03-17_173747.json
+sysid_sts3215_sin_sin_2025-03-17_174221.json
+sysid_sts3215_up_and_down_2025-03-17_174619.json
+sysid_sts3215_lift_and_drop_2025-03-17_173907.json
+sysid_sts3215_sin_sin_2025-03-17_174124.json
+sysid_sts3215_lift_and_drop_2025-03-17_173638.json
+sysid_sts3215_up_and_down_2025-03-17_174727.json
+sysid_sts3215_brutal_2025-03-17_175609.json
+sysid_sts3215_sin_time_square_2025-03-17_175017.json
+sysid_sts3215_brutal_2025-03-17_175558.json
+sysid_sts3215_sin_time_square_2025-03-17_175040.json
+sysid_sts3215_up_and_down_2025-03-17_174909.json
+sysid_sts3215_brutal_2025-03-17_175427.json
+sysid_sts3215_brutal_2025-03-17_175535.json
+sysid_sts3215_lift_and_drop_2025-03-17_173953.json
+sysid_sts3215_sin_time_square_2025-03-17_175257.json
+sysid_sts3215_sin_time_square_2025-03-17_175200.json
+sysid_sts3215_brutal_2025-03-17_175718.json
+sysid_sts3215_up_and_down_2025-03-17_174704.json
+sysid_sts3215_sin_time_square_2025-03-17_175148.json
+sysid_sts3215_brutal_2025-03-17_175450.json
+sysid_sts3215_sin_sin_2025-03-17_174255.json
+sysid_sts3215_sin_time_square_2025-03-17_175308.json
+sysid_sts3215_sin_sin_2025-03-17_174243.json
+sysid_sts3215_sin_sin_2025-03-17_174306.json
+sysid_sts3215_up_and_down_2025-03-17_174801.json
+sysid_sts3215_sin_sin_2025-03-17_174351.json
+sysid_sts3215_sin_sin_2025-03-17_174038.json
+sysid_sts3215_up_and_down_2025-03-17_174545.json
+sysid_sts3215_lift_and_drop_2025-03-17_173724.json
+sysid_sts3215_brutal_2025-03-17_175353.json
+sysid_sts3215_sin_sin_2025-03-17_174147.json
+sysid_sts3215_lift_and_drop_2025-03-17_173821.json
+sysid_sts3215_lift_and_drop_2025-03-17_173856.json
+sysid_sts3215_sin_time_square_2025-03-17_174943.json
+sysid_sts3215_lift_and_drop_2025-03-17_173552.json
+sysid_sts3215_sin_time_square_2025-03-17_174955.json
+sysid_sts3215_lift_and_drop_2025-03-17_173712.json
+sysid_sts3215_lift_and_drop_2025-03-17_173758.json
+sysid_sts3215_sin_sin_2025-03-17_174101.json
+sysid_sts3215_sin_sin_2025-03-17_174414.json
+sysid_sts3215_brutal_2025-03-17_175513.json
+sysid_sts3215_lift_and_drop_2025-03-17_173735.json
+sysid_sts3215_sin_time_square_2025-03-17_175103.json
+sysid_sts3215_sin_sin_2025-03-17_174232.json
+sysid_sts3215_up_and_down_2025-03-17_174630.json
+sysid_sts3215_lift_and_drop_2025-03-17_173810.json
+sysid_sts3215_sin_time_square_2025-03-17_175342.json
+sysid_sts3215_brutal_2025-03-17_175524.json
+sysid_sts3215_lift_and_drop_2025-03-17_174004.json
+sysid_sts3215_sin_sin_2025-03-17_174209.json
+sysid_sts3215_sin_time_square_2025-03-17_175211.json
+sysid_sts3215_sin_time_square_2025-03-17_175006.json
+sysid_sts3215_sin_time_square_2025-03-17_175114.json
+sysid_sts3215_up_and_down_2025-03-17_174534.json
+sysid_sts3215_up_and_down_2025-03-17_174522.json
+sysid_sts3215_brutal_2025-03-17_175621.json
+sysid_sts3215_lift_and_drop_2025-03-17_173919.json
+sysid_sts3215_lift_and_drop_2025-03-17_173626.json
+sysid_sts3215_sin_time_square_2025-03-17_175319.json
+sysid_sts3215_up_and_down_2025-03-17_174739.json
+sysid_sts3215_brutal_2025-03-17_175752.json
+sysid_sts3215_sin_sin_2025-03-17_174317.json
+sysid_sts3215_up_and_down_2025-03-17_174847.json
+sysid_sts3215_sin_sin_2025-03-17_174340.json
+sysid_sts3215_brutal_2025-03-17_175729.json
+sysid_sts3215_brutal_2025-03-17_175416.json
+sysid_sts3215_sin_sin_2025-03-17_174403.json
+sysid_sts3215_sin_time_square_2025-03-17_174932.json
+--------------------------------------------------
+Mass:  0.741 kg, Length:  0.150 m
+Number of experiments: 120
+Files:
+sysid_sts3215_sin_sin_2025-03-17_193017.json
+sysid_sts3215_up_and_down_2025-03-17_193643.json
+sysid_sts3215_up_and_down_2025-03-17_193751.json
+sysid_sts3215_brutal_2025-03-17_194752.json
+sysid_sts3215_sin_sin_2025-03-17_193113.json
+sysid_sts3215_sin_time_square_2025-03-17_194030.json
+sysid_sts3215_brutal_2025-03-17_194656.json
+sysid_sts3215_brutal_2025-03-17_194343.json
+sysid_sts3215_up_and_down_2025-03-17_193546.json
+sysid_sts3215_lift_and_drop_2025-03-17_192759.json
+sysid_sts3215_sin_time_square_2025-03-17_194138.json
+sysid_sts3215_sin_time_square_2025-03-17_194246.json
+sysid_sts3215_lift_and_drop_2025-03-17_192954.json
+sysid_sts3215_lift_and_drop_2025-03-17_192542.json
+sysid_sts3215_lift_and_drop_2025-03-17_192811.json
+sysid_sts3215_lift_and_drop_2025-03-17_192942.json
+sysid_sts3215_sin_sin_2025-03-17_193148.json
+sysid_sts3215_sin_sin_2025-03-17_193426.json
+sysid_sts3215_lift_and_drop_2025-03-17_192702.json
+sysid_sts3215_sin_time_square_2025-03-17_193956.json
+sysid_sts3215_sin_sin_2025-03-17_193125.json
+sysid_sts3215_sin_time_square_2025-03-17_194007.json
+sysid_sts3215_brutal_2025-03-17_194548.json
+sysid_sts3215_sin_time_square_2025-03-17_194115.json
+sysid_sts3215_up_and_down_2025-03-17_193859.json
+sysid_sts3215_lift_and_drop_2025-03-17_192650.json
+sysid_sts3215_brutal_2025-03-17_194525.json
+sysid_sts3215_sin_sin_2025-03-17_193256.json
+sysid_sts3215_up_and_down_2025-03-17_193802.json
+sysid_sts3215_brutal_2025-03-17_194417.json
+sysid_sts3215_sin_sin_2025-03-17_193352.json
+sysid_sts3215_up_and_down_2025-03-17_193654.json
+sysid_sts3215_up_and_down_2025-03-17_193438.json
+sysid_sts3215_brutal_2025-03-17_194354.json
+sysid_sts3215_up_and_down_2025-03-17_193825.json
+sysid_sts3215_sin_time_square_2025-03-17_194201.json
+sysid_sts3215_sin_time_square_2025-03-17_194104.json
+sysid_sts3215_sin_time_square_2025-03-17_194041.json
+sysid_sts3215_brutal_2025-03-17_194559.json
+sysid_sts3215_sin_sin_2025-03-17_193318.json
+sysid_sts3215_lift_and_drop_2025-03-17_192616.json
+sysid_sts3215_sin_time_square_2025-03-17_194309.json
+sysid_sts3215_brutal_2025-03-17_194502.json
+sysid_sts3215_sin_sin_2025-03-17_193210.json
+sysid_sts3215_up_and_down_2025-03-17_193813.json
+sysid_sts3215_brutal_2025-03-17_194514.json
+sysid_sts3215_brutal_2025-03-17_194451.json
+sysid_sts3215_sin_time_square_2025-03-17_194149.json
+sysid_sts3215_lift_and_drop_2025-03-17_192748.json
+sysid_sts3215_up_and_down_2025-03-17_193557.json
+sysid_sts3215_up_and_down_2025-03-17_193500.json
+sysid_sts3215_up_and_down_2025-03-17_193717.json
+sysid_sts3215_sin_sin_2025-03-17_193051.json
+sysid_sts3215_brutal_2025-03-17_194610.json
+sysid_sts3215_lift_and_drop_2025-03-17_192725.json
+sysid_sts3215_sin_sin_2025-03-17_193102.json
+sysid_sts3215_lift_and_drop_2025-03-17_192908.json
+sysid_sts3215_sin_time_square_2025-03-17_193910.json
+sysid_sts3215_up_and_down_2025-03-17_193449.json
+sysid_sts3215_lift_and_drop_2025-03-17_192713.json
+sysid_sts3215_lift_and_drop_2025-03-17_192857.json
+sysid_sts3215_brutal_2025-03-17_194718.json
+sysid_sts3215_sin_time_square_2025-03-17_194257.json
+sysid_sts3215_lift_and_drop_2025-03-17_192553.json
+sysid_sts3215_up_and_down_2025-03-17_193609.json
+sysid_sts3215_sin_sin_2025-03-17_193159.json
+sysid_sts3215_brutal_2025-03-17_194633.json
+sysid_sts3215_sin_time_square_2025-03-17_193944.json
+sysid_sts3215_up_and_down_2025-03-17_193523.json
+sysid_sts3215_brutal_2025-03-17_194536.json
+sysid_sts3215_sin_sin_2025-03-17_193341.json
+sysid_sts3215_sin_time_square_2025-03-17_194235.json
+sysid_sts3215_sin_time_square_2025-03-17_194223.json
+sysid_sts3215_lift_and_drop_2025-03-17_192931.json
+sysid_sts3215_brutal_2025-03-17_194804.json
+sysid_sts3215_sin_time_square_2025-03-17_194018.json
+sysid_sts3215_sin_time_square_2025-03-17_194331.json
+sysid_sts3215_sin_time_square_2025-03-17_194126.json
+sysid_sts3215_sin_sin_2025-03-17_193005.json
+sysid_sts3215_sin_time_square_2025-03-17_193933.json
+sysid_sts3215_brutal_2025-03-17_194644.json
+sysid_sts3215_brutal_2025-03-17_194428.json
+sysid_sts3215_sin_sin_2025-03-17_193415.json
+sysid_sts3215_brutal_2025-03-17_194741.json
+sysid_sts3215_lift_and_drop_2025-03-17_192822.json
+sysid_sts3215_sin_sin_2025-03-17_193028.json
+sysid_sts3215_up_and_down_2025-03-17_193739.json
+sysid_sts3215_sin_sin_2025-03-17_193244.json
+sysid_sts3215_brutal_2025-03-17_194405.json
+sysid_sts3215_lift_and_drop_2025-03-17_192530.json
+sysid_sts3215_up_and_down_2025-03-17_193847.json
+sysid_sts3215_lift_and_drop_2025-03-17_192834.json
+sysid_sts3215_lift_and_drop_2025-03-17_192639.json
+sysid_sts3215_up_and_down_2025-03-17_193534.json
+sysid_sts3215_sin_sin_2025-03-17_193233.json
+sysid_sts3215_sin_sin_2025-03-17_193136.json
+sysid_sts3215_up_and_down_2025-03-17_193631.json
+sysid_sts3215_up_and_down_2025-03-17_193728.json
+sysid_sts3215_sin_sin_2025-03-17_193039.json
+sysid_sts3215_lift_and_drop_2025-03-17_192736.json
+sysid_sts3215_sin_sin_2025-03-17_193404.json
+sysid_sts3215_brutal_2025-03-17_194707.json
+sysid_sts3215_up_and_down_2025-03-17_193620.json
+sysid_sts3215_lift_and_drop_2025-03-17_192628.json
+sysid_sts3215_sin_sin_2025-03-17_193222.json
+sysid_sts3215_sin_sin_2025-03-17_193330.json
+sysid_sts3215_lift_and_drop_2025-03-17_192845.json
+sysid_sts3215_sin_time_square_2025-03-17_194212.json
+sysid_sts3215_up_and_down_2025-03-17_193836.json
+sysid_sts3215_brutal_2025-03-17_194622.json
+sysid_sts3215_lift_and_drop_2025-03-17_192605.json
+sysid_sts3215_brutal_2025-03-17_194730.json
+sysid_sts3215_sin_time_square_2025-03-17_194052.json
+sysid_sts3215_sin_time_square_2025-03-17_193922.json
+sysid_sts3215_up_and_down_2025-03-17_193705.json
+sysid_sts3215_brutal_2025-03-17_194439.json
+sysid_sts3215_sin_sin_2025-03-17_193307.json
+sysid_sts3215_lift_and_drop_2025-03-17_192920.json
+sysid_sts3215_up_and_down_2025-03-17_193512.json
+sysid_sts3215_sin_time_square_2025-03-17_194320.json
+--------------------------------------------------
+Mass:  0.969 kg, Length:  0.100 m
+Number of experiments: 120
+Files:
+sysid_sts3215_sin_time_square_2025-03-17_181859.json
+sysid_sts3215_up_and_down_2025-03-17_181500.json
+sysid_sts3215_sin_sin_2025-03-17_180800.json
+sysid_sts3215_up_and_down_2025-03-17_181404.json
+sysid_sts3215_lift_and_drop_2025-03-17_180532.json
+sysid_sts3215_sin_sin_2025-03-17_180857.json
+sysid_sts3215_sin_sin_2025-03-17_181102.json
+sysid_sts3215_sin_sin_2025-03-17_181051.json
+sysid_sts3215_up_and_down_2025-03-17_181222.json
+sysid_sts3215_lift_and_drop_2025-03-17_180314.json
+sysid_sts3215_sin_time_square_2025-03-17_181910.json
+sysid_sts3215_brutal_2025-03-17_182235.json
+sysid_sts3215_up_and_down_2025-03-17_181330.json
+sysid_sts3215_sin_time_square_2025-03-17_181802.json
+sysid_sts3215_up_and_down_2025-03-17_181449.json
+sysid_sts3215_brutal_2025-03-17_182223.json
+sysid_sts3215_brutal_2025-03-17_182331.json
+sysid_sts3215_lift_and_drop_2025-03-17_180400.json
+sysid_sts3215_sin_time_square_2025-03-17_181654.json
+sysid_sts3215_sin_sin_2025-03-17_180749.json
+sysid_sts3215_sin_time_square_2025-03-17_181751.json
+sysid_sts3215_brutal_2025-03-17_182127.json
+sysid_sts3215_lift_and_drop_2025-03-17_180544.json
+sysid_sts3215_sin_time_square_2025-03-17_181643.json
+sysid_sts3215_lift_and_drop_2025-03-17_180303.json
+sysid_sts3215_lift_and_drop_2025-03-17_180641.json
+sysid_sts3215_sin_sin_2025-03-17_180909.json
+sysid_sts3215_sin_sin_2025-03-17_180704.json
+sysid_sts3215_brutal_2025-03-17_182428.json
+sysid_sts3215_lift_and_drop_2025-03-17_180509.json
+sysid_sts3215_up_and_down_2025-03-17_181307.json
+sysid_sts3215_sin_time_square_2025-03-17_182018.json
+sysid_sts3215_up_and_down_2025-03-17_181147.json
+sysid_sts3215_lift_and_drop_2025-03-17_180607.json
+sysid_sts3215_sin_time_square_2025-03-17_181557.json
+sysid_sts3215_sin_time_square_2025-03-17_181717.json
+sysid_sts3215_lift_and_drop_2025-03-17_180555.json
+sysid_sts3215_brutal_2025-03-17_182053.json
+sysid_sts3215_lift_and_drop_2025-03-17_180349.json
+sysid_sts3215_sin_sin_2025-03-17_180943.json
+sysid_sts3215_sin_sin_2025-03-17_180715.json
+sysid_sts3215_up_and_down_2025-03-17_181438.json
+sysid_sts3215_sin_time_square_2025-03-17_181609.json
+sysid_sts3215_up_and_down_2025-03-17_181341.json
+sysid_sts3215_brutal_2025-03-17_182212.json
+sysid_sts3215_sin_time_square_2025-03-17_181825.json
+sysid_sts3215_sin_sin_2025-03-17_181113.json
+sysid_sts3215_lift_and_drop_2025-03-17_180630.json
+sysid_sts3215_sin_sin_2025-03-17_181017.json
+sysid_sts3215_up_and_down_2025-03-17_181244.json
+sysid_sts3215_up_and_down_2025-03-17_181546.json
+sysid_sts3215_sin_time_square_2025-03-17_181848.json
+sysid_sts3215_sin_sin_2025-03-17_180738.json
+sysid_sts3215_sin_sin_2025-03-17_180954.json
+sysid_sts3215_sin_sin_2025-03-17_180846.json
+sysid_sts3215_up_and_down_2025-03-17_181415.json
+sysid_sts3215_lift_and_drop_2025-03-17_180446.json
+sysid_sts3215_up_and_down_2025-03-17_181136.json
+sysid_sts3215_lift_and_drop_2025-03-17_180240.json
+sysid_sts3215_up_and_down_2025-03-17_181233.json
+sysid_sts3215_sin_time_square_2025-03-17_181956.json
+sysid_sts3215_sin_time_square_2025-03-17_181813.json
+sysid_sts3215_lift_and_drop_2025-03-17_180217.json
+sysid_sts3215_brutal_2025-03-17_182320.json
+sysid_sts3215_lift_and_drop_2025-03-17_180412.json
+sysid_sts3215_up_and_down_2025-03-17_181318.json
+sysid_sts3215_sin_sin_2025-03-17_180920.json
+sysid_sts3215_brutal_2025-03-17_182030.json
+sysid_sts3215_sin_time_square_2025-03-17_181739.json
+sysid_sts3215_sin_time_square_2025-03-17_182007.json
+sysid_sts3215_brutal_2025-03-17_182354.json
+sysid_sts3215_brutal_2025-03-17_182138.json
+sysid_sts3215_brutal_2025-03-17_182246.json
+sysid_sts3215_lift_and_drop_2025-03-17_180326.json
+sysid_sts3215_up_and_down_2025-03-17_181210.json
+sysid_sts3215_sin_time_square_2025-03-17_181922.json
+sysid_sts3215_sin_sin_2025-03-17_180652.json
+sysid_sts3215_sin_time_square_2025-03-17_181631.json
+sysid_sts3215_brutal_2025-03-17_182440.json
+sysid_sts3215_up_and_down_2025-03-17_181512.json
+sysid_sts3215_brutal_2025-03-17_182417.json
+sysid_sts3215_sin_sin_2025-03-17_180812.json
+sysid_sts3215_lift_and_drop_2025-03-17_180521.json
+sysid_sts3215_brutal_2025-03-17_182115.json
+sysid_sts3215_sin_sin_2025-03-17_181039.json
+sysid_sts3215_brutal_2025-03-17_182343.json
+sysid_sts3215_up_and_down_2025-03-17_181159.json
+sysid_sts3215_brutal_2025-03-17_182201.json
+sysid_sts3215_sin_time_square_2025-03-17_181836.json
+sysid_sts3215_brutal_2025-03-17_182104.json
+sysid_sts3215_brutal_2025-03-17_182041.json
+sysid_sts3215_sin_sin_2025-03-17_181028.json
+sysid_sts3215_sin_sin_2025-03-17_180834.json
+sysid_sts3215_up_and_down_2025-03-17_181125.json
+sysid_sts3215_brutal_2025-03-17_182309.json
+sysid_sts3215_up_and_down_2025-03-17_181426.json
+sysid_sts3215_up_and_down_2025-03-17_181534.json
+sysid_sts3215_sin_time_square_2025-03-17_181705.json
+sysid_sts3215_brutal_2025-03-17_182149.json
+sysid_sts3215_lift_and_drop_2025-03-17_180252.json
+sysid_sts3215_sin_sin_2025-03-17_180726.json
+sysid_sts3215_sin_time_square_2025-03-17_181944.json
+sysid_sts3215_sin_time_square_2025-03-17_181728.json
+sysid_sts3215_sin_sin_2025-03-17_180823.json
+sysid_sts3215_sin_sin_2025-03-17_180931.json
+sysid_sts3215_lift_and_drop_2025-03-17_180229.json
+sysid_sts3215_up_and_down_2025-03-17_181523.json
+sysid_sts3215_brutal_2025-03-17_182451.json
+sysid_sts3215_sin_time_square_2025-03-17_181620.json
+sysid_sts3215_lift_and_drop_2025-03-17_180435.json
+sysid_sts3215_brutal_2025-03-17_182406.json
+sysid_sts3215_lift_and_drop_2025-03-17_180423.json
+sysid_sts3215_lift_and_drop_2025-03-17_180618.json
+sysid_sts3215_lift_and_drop_2025-03-17_180458.json
+sysid_sts3215_up_and_down_2025-03-17_181352.json
+sysid_sts3215_brutal_2025-03-17_182257.json
+sysid_sts3215_sin_time_square_2025-03-17_181933.json
+sysid_sts3215_sin_sin_2025-03-17_181005.json
+sysid_sts3215_lift_and_drop_2025-03-17_180337.json
+sysid_sts3215_up_and_down_2025-03-17_181256.json
+--------------------------------------------------
+Mass:  0.969 kg, Length:  0.150 m
+Number of experiments: 120
+Files:
+sysid_sts3215_sin_sin_2025-03-17_220224.json
+sysid_sts3215_lift_and_drop_2025-03-17_220212.json
+sysid_sts3215_lift_and_drop_2025-03-17_220029.json
+sysid_sts3215_up_and_down_2025-03-17_220827.json
+sysid_sts3215_sin_time_square_2025-03-17_223217.json
+sysid_sts3215_up_and_down_2025-03-17_220935.json
+sysid_sts3215_sin_time_square_2025-03-17_223000.json
+sysid_sts3215_brutal_2025-03-17_222309.json
+sysid_sts3215_sin_time_square_2025-03-17_223057.json
+sysid_sts3215_lift_and_drop_2025-03-17_215920.json
+sysid_sts3215_up_and_down_2025-03-17_221021.json
+sysid_sts3215_lift_and_drop_2025-03-17_220052.json
+sysid_sts3215_up_and_down_2025-03-17_220958.json
+sysid_sts3215_sin_time_square_2025-03-17_222938.json
+sysid_sts3215_lift_and_drop_2025-03-17_215812.json
+sysid_sts3215_sin_time_square_2025-03-17_222830.json
+sysid_sts3215_up_and_down_2025-03-17_220850.json
+sysid_sts3215_sin_time_square_2025-03-17_223109.json
+sysid_sts3215_brutal_2025-03-17_222611.json
+sysid_sts3215_brutal_2025-03-17_222406.json
+sysid_sts3215_up_and_down_2025-03-17_220742.json
+sysid_sts3215_brutal_2025-03-17_222451.json
+sysid_sts3215_brutal_2025-03-17_222514.json
+sysid_sts3215_brutal_2025-03-17_222502.json
+sysid_sts3215_sin_sin_2025-03-17_220321.json
+sysid_sts3215_up_and_down_2025-03-17_220719.json
+sysid_sts3215_sin_sin_2025-03-17_220634.json
+sysid_sts3215_sin_time_square_2025-03-17_222915.json
+sysid_sts3215_brutal_2025-03-17_222332.json
+sysid_sts3215_sin_sin_2025-03-17_220622.json
+sysid_sts3215_brutal_2025-03-17_222559.json
+sysid_sts3215_sin_time_square_2025-03-17_222949.json
+sysid_sts3215_up_and_down_2025-03-17_220753.json
+sysid_sts3215_brutal_2025-03-17_222417.json
+sysid_sts3215_brutal_2025-03-17_222440.json
+sysid_sts3215_lift_and_drop_2025-03-17_220127.json
+sysid_sts3215_brutal_2025-03-17_222246.json
+sysid_sts3215_brutal_2025-03-17_222354.json
+sysid_sts3215_up_and_down_2025-03-17_220708.json
+sysid_sts3215_sin_time_square_2025-03-17_222904.json
+sysid_sts3215_sin_time_square_2025-03-17_222841.json
+sysid_sts3215_brutal_2025-03-17_222548.json
+sysid_sts3215_sin_time_square_2025-03-17_223143.json
+sysid_sts3215_brutal_2025-03-17_222525.json
+sysid_sts3215_lift_and_drop_2025-03-17_215823.json
+sysid_sts3215_sin_sin_2025-03-17_220258.json
+sysid_sts3215_sin_time_square_2025-03-17_223154.json
+sysid_sts3215_sin_time_square_2025-03-17_223046.json
+sysid_sts3215_lift_and_drop_2025-03-17_215835.json
+sysid_sts3215_sin_sin_2025-03-17_220537.json
+sysid_sts3215_sin_sin_2025-03-17_220235.json
+sysid_sts3215_sin_time_square_2025-03-17_223251.json
+sysid_sts3215_lift_and_drop_2025-03-17_215858.json
+sysid_sts3215_up_and_down_2025-03-17_220924.json
+sysid_sts3215_up_and_down_2025-03-17_220816.json
+sysid_sts3215_brutal_2025-03-17_222343.json
+sysid_sts3215_brutal_2025-03-17_222656.json
+sysid_sts3215_sin_sin_2025-03-17_220645.json
+sysid_sts3215_sin_sin_2025-03-17_220429.json
+sysid_sts3215_up_and_down_2025-03-17_220912.json
+sysid_sts3215_lift_and_drop_2025-03-17_220018.json
+sysid_sts3215_up_and_down_2025-03-17_220656.json
+sysid_sts3215_sin_sin_2025-03-17_220611.json
+sysid_sts3215_sin_time_square_2025-03-17_222926.json
+sysid_sts3215_up_and_down_2025-03-17_220946.json
+sysid_sts3215_sin_sin_2025-03-17_220406.json
+sysid_sts3215_sin_sin_2025-03-17_220451.json
+sysid_sts3215_sin_sin_2025-03-17_220514.json
+sysid_sts3215_up_and_down_2025-03-17_221117.json
+sysid_sts3215_lift_and_drop_2025-03-17_215800.json
+sysid_sts3215_sin_time_square_2025-03-17_223120.json
+sysid_sts3215_sin_time_square_2025-03-17_223012.json
+sysid_sts3215_lift_and_drop_2025-03-17_215932.json
+sysid_sts3215_up_and_down_2025-03-17_220730.json
+sysid_sts3215_brutal_2025-03-17_222622.json
+sysid_sts3215_sin_sin_2025-03-17_220332.json
+sysid_sts3215_sin_time_square_2025-03-17_223205.json
+sysid_sts3215_up_and_down_2025-03-17_221009.json
+sysid_sts3215_brutal_2025-03-17_222320.json
+sysid_sts3215_lift_and_drop_2025-03-17_215909.json
+sysid_sts3215_lift_and_drop_2025-03-17_220201.json
+sysid_sts3215_sin_sin_2025-03-17_220309.json
+sysid_sts3215_lift_and_drop_2025-03-17_220041.json
+sysid_sts3215_up_and_down_2025-03-17_221032.json
+sysid_sts3215_lift_and_drop_2025-03-17_220104.json
+sysid_sts3215_lift_and_drop_2025-03-17_215749.json
+sysid_sts3215_sin_time_square_2025-03-17_223228.json
+sysid_sts3215_up_and_down_2025-03-17_220838.json
+sysid_sts3215_sin_sin_2025-03-17_220503.json
+sysid_sts3215_brutal_2025-03-17_222707.json
+sysid_sts3215_lift_and_drop_2025-03-17_220149.json
+sysid_sts3215_brutal_2025-03-17_222258.json
+sysid_sts3215_lift_and_drop_2025-03-17_220115.json
+sysid_sts3215_sin_time_square_2025-03-17_223239.json
+sysid_sts3215_sin_sin_2025-03-17_220343.json
+sysid_sts3215_up_and_down_2025-03-17_220901.json
+sysid_sts3215_sin_sin_2025-03-17_220355.json
+sysid_sts3215_brutal_2025-03-17_222645.json
+sysid_sts3215_lift_and_drop_2025-03-17_215955.json
+sysid_sts3215_lift_and_drop_2025-03-17_215943.json
+sysid_sts3215_sin_sin_2025-03-17_220417.json
+sysid_sts3215_sin_sin_2025-03-17_220440.json
+sysid_sts3215_up_and_down_2025-03-17_221055.json
+sysid_sts3215_sin_time_square_2025-03-17_223035.json
+sysid_sts3215_up_and_down_2025-03-17_221043.json
+sysid_sts3215_up_and_down_2025-03-17_221106.json
+sysid_sts3215_sin_time_square_2025-03-17_223023.json
+sysid_sts3215_lift_and_drop_2025-03-17_215846.json
+sysid_sts3215_sin_time_square_2025-03-17_223131.json
+sysid_sts3215_up_and_down_2025-03-17_220804.json
+sysid_sts3215_sin_sin_2025-03-17_220246.json
+sysid_sts3215_brutal_2025-03-17_222428.json
+sysid_sts3215_sin_sin_2025-03-17_220600.json
+sysid_sts3215_lift_and_drop_2025-03-17_220138.json
+sysid_sts3215_sin_time_square_2025-03-17_222852.json
+sysid_sts3215_brutal_2025-03-17_222633.json
+sysid_sts3215_sin_sin_2025-03-17_220548.json
+sysid_sts3215_brutal_2025-03-17_222536.json
+sysid_sts3215_lift_and_drop_2025-03-17_220006.json
+sysid_sts3215_sin_sin_2025-03-17_220525.json
+--------------------------------------------------
+Mass:  1.168 kg, Length:  0.100 m
+Number of experiments: 120
+Files:
+sysid_sts3215_sin_sin_2025-03-17_172517.json
+sysid_sts3215_sin_sin_2025-03-17_172540.json
+sysid_sts3215_lift_and_drop_2025-03-17_163633.json
+sysid_sts3215_up_and_down_2025-03-17_164215.json
+sysid_sts3215_brutal_2025-03-17_165053.json
+sysid_sts3215_lift_and_drop_2025-03-17_163936.json
+sysid_sts3215_up_and_down_2025-03-17_164346.json
+sysid_sts3215_sin_time_square_2025-03-17_164803.json
+sysid_sts3215_sin_time_square_2025-03-17_164911.json
+sysid_sts3215_lift_and_drop_2025-03-17_163804.json
+sysid_sts3215_sin_time_square_2025-03-17_164454.json
+sysid_sts3215_up_and_down_2025-03-17_164409.json
+sysid_sts3215_sin_time_square_2025-03-17_164751.json
+sysid_sts3215_lift_and_drop_2025-03-17_163644.json
+sysid_sts3215_up_and_down_2025-03-17_164130.json
+sysid_sts3215_sin_time_square_2025-03-17_164706.json
+sysid_sts3215_sin_time_square_2025-03-17_164643.json
+sysid_sts3215_up_and_down_2025-03-17_164022.json
+sysid_sts3215_sin_sin_2025-03-17_172648.json
+sysid_sts3215_brutal_2025-03-17_165224.json
+sysid_sts3215_sin_time_square_2025-03-17_164654.json
+sysid_sts3215_sin_sin_2025-03-17_172432.json
+sysid_sts3215_brutal_2025-03-17_165320.json
+sysid_sts3215_sin_time_square_2025-03-17_164814.json
+sysid_sts3215_sin_sin_2025-03-17_172625.json
+sysid_sts3215_sin_time_square_2025-03-17_164443.json
+sysid_sts3215_sin_time_square_2025-03-17_164506.json
+sysid_sts3215_sin_sin_2025-03-17_172756.json
+sysid_sts3215_brutal_2025-03-17_165212.json
+sysid_sts3215_sin_sin_2025-03-17_172853.json
+sysid_sts3215_up_and_down_2025-03-17_164238.json
+sysid_sts3215_up_and_down_2025-03-17_164107.json
+sysid_sts3215_sin_time_square_2025-03-17_164859.json
+sysid_sts3215_brutal_2025-03-17_165258.json
+sysid_sts3215_sin_sin_2025-03-17_172819.json
+sysid_sts3215_lift_and_drop_2025-03-17_163547.json
+sysid_sts3215_sin_time_square_2025-03-17_164517.json
+sysid_sts3215_sin_time_square_2025-03-17_164540.json
+sysid_sts3215_lift_and_drop_2025-03-17_163707.json
+sysid_sts3215_sin_sin_2025-03-17_172659.json
+sysid_sts3215_brutal_2025-03-17_165235.json
+sysid_sts3215_sin_sin_2025-03-17_172454.json
+sysid_sts3215_up_and_down_2025-03-17_164045.json
+sysid_sts3215_sin_time_square_2025-03-17_164848.json
+sysid_sts3215_sin_time_square_2025-03-17_164632.json
+sysid_sts3215_up_and_down_2025-03-17_164141.json
+sysid_sts3215_sin_sin_2025-03-17_172710.json
+sysid_sts3215_sin_sin_2025-03-17_172602.json
+sysid_sts3215_up_and_down_2025-03-17_164301.json
+sysid_sts3215_sin_time_square_2025-03-17_164825.json
+sysid_sts3215_sin_sin_2025-03-17_172614.json
+sysid_sts3215_up_and_down_2025-03-17_164204.json
+sysid_sts3215_sin_time_square_2025-03-17_164609.json
+sysid_sts3215_up_and_down_2025-03-17_164357.json
+sysid_sts3215_brutal_2025-03-17_164956.json
+sysid_sts3215_sin_sin_2025-03-17_172506.json
+sysid_sts3215_sin_sin_2025-03-17_172443.json
+sysid_sts3215_sin_sin_2025-03-17_172551.json
+sysid_sts3215_lift_and_drop_2025-03-17_163730.json
+sysid_sts3215_brutal_2025-03-17_165019.json
+sysid_sts3215_sin_time_square_2025-03-17_164740.json
+sysid_sts3215_up_and_down_2025-03-17_164033.json
+sysid_sts3215_sin_time_square_2025-03-17_164717.json
+sysid_sts3215_up_and_down_2025-03-17_164249.json
+sysid_sts3215_lift_and_drop_2025-03-17_163839.json
+sysid_sts3215_brutal_2025-03-17_165127.json
+sysid_sts3215_lift_and_drop_2025-03-17_163656.json
+sysid_sts3215_brutal_2025-03-17_165149.json
+sysid_sts3215_brutal_2025-03-17_164922.json
+sysid_sts3215_up_and_down_2025-03-17_164323.json
+sysid_sts3215_lift_and_drop_2025-03-17_163816.json
+sysid_sts3215_brutal_2025-03-17_165309.json
+sysid_sts3215_up_and_down_2025-03-17_164227.json
+sysid_sts3215_sin_sin_2025-03-17_172636.json
+sysid_sts3215_up_and_down_2025-03-17_164335.json
+sysid_sts3215_brutal_2025-03-17_165041.json
+sysid_sts3215_brutal_2025-03-17_165104.json
+sysid_sts3215_lift_and_drop_2025-03-17_163621.json
+sysid_sts3215_brutal_2025-03-17_165201.json
+sysid_sts3215_sin_time_square_2025-03-17_164558.json
+sysid_sts3215_up_and_down_2025-03-17_164010.json
+sysid_sts3215_sin_sin_2025-03-17_172841.json
+sysid_sts3215_lift_and_drop_2025-03-17_163948.json
+sysid_sts3215_lift_and_drop_2025-03-17_163925.json
+sysid_sts3215_sin_sin_2025-03-17_172528.json
+sysid_sts3215_sin_sin_2025-03-17_172744.json
+sysid_sts3215_lift_and_drop_2025-03-17_163913.json
+sysid_sts3215_sin_sin_2025-03-17_172733.json
+sysid_sts3215_up_and_down_2025-03-17_164119.json
+sysid_sts3215_up_and_down_2025-03-17_164420.json
+sysid_sts3215_lift_and_drop_2025-03-17_163753.json
+sysid_sts3215_brutal_2025-03-17_165332.json
+sysid_sts3215_lift_and_drop_2025-03-17_163719.json
+sysid_sts3215_sin_time_square_2025-03-17_164837.json
+sysid_sts3215_brutal_2025-03-17_165138.json
+sysid_sts3215_brutal_2025-03-17_165246.json
+sysid_sts3215_lift_and_drop_2025-03-17_163959.json
+sysid_sts3215_sin_sin_2025-03-17_172807.json
+sysid_sts3215_sin_time_square_2025-03-17_164620.json
+sysid_sts3215_brutal_2025-03-17_164945.json
+sysid_sts3215_up_and_down_2025-03-17_164153.json
+sysid_sts3215_up_and_down_2025-03-17_164431.json
+sysid_sts3215_lift_and_drop_2025-03-17_163742.json
+sysid_sts3215_lift_and_drop_2025-03-17_163902.json
+sysid_sts3215_sin_time_square_2025-03-17_164728.json
+sysid_sts3215_brutal_2025-03-17_165030.json
+sysid_sts3215_sin_sin_2025-03-17_172722.json
+sysid_sts3215_lift_and_drop_2025-03-17_163850.json
+sysid_sts3215_lift_and_drop_2025-03-17_163610.json
+sysid_sts3215_brutal_2025-03-17_164933.json
+sysid_sts3215_sin_sin_2025-03-17_172830.json
+sysid_sts3215_sin_time_square_2025-03-17_164528.json
+sysid_sts3215_brutal_2025-03-17_165343.json
+sysid_sts3215_lift_and_drop_2025-03-17_163558.json
+sysid_sts3215_up_and_down_2025-03-17_164056.json
+sysid_sts3215_brutal_2025-03-17_165007.json
+sysid_sts3215_brutal_2025-03-17_165115.json
+sysid_sts3215_lift_and_drop_2025-03-17_163535.json
+sysid_sts3215_up_and_down_2025-03-17_164312.json
+sysid_sts3215_lift_and_drop_2025-03-17_163827.json
+--------------------------------------------------
+Mass:  1.168 kg, Length:  0.150 m
+Number of experiments: 120
+Files:
+sysid_sts3215_sin_time_square_2025-03-17_225228.json
+sysid_sts3215_up_and_down_2025-03-17_224937.json
+sysid_sts3215_sin_sin_2025-03-17_224334.json
+sysid_sts3215_sin_time_square_2025-03-17_225455.json
+sysid_sts3215_up_and_down_2025-03-17_225023.json
+sysid_sts3215_up_and_down_2025-03-17_225131.json
+sysid_sts3215_sin_time_square_2025-03-17_225615.json
+sysid_sts3215_lift_and_drop_2025-03-17_223957.json
+sysid_sts3215_sin_time_square_2025-03-17_225603.json
+sysid_sts3215_sin_sin_2025-03-17_224420.json
+sysid_sts3215_up_and_down_2025-03-17_224829.json
+sysid_sts3215_brutal_2025-03-17_225854.json
+sysid_sts3215_sin_time_square_2025-03-17_225336.json
+sysid_sts3215_lift_and_drop_2025-03-17_224031.json
+sysid_sts3215_brutal_2025-03-17_225842.json
+sysid_sts3215_sin_sin_2025-03-17_224528.json
+sysid_sts3215_lift_and_drop_2025-03-17_224226.json
+sysid_sts3215_up_and_down_2025-03-17_224852.json
+sysid_sts3215_brutal_2025-03-17_225746.json
+sysid_sts3215_brutal_2025-03-17_230047.json
+sysid_sts3215_lift_and_drop_2025-03-17_223848.json
+sysid_sts3215_sin_sin_2025-03-17_224505.json
+sysid_sts3215_brutal_2025-03-17_225951.json
+sysid_sts3215_lift_and_drop_2025-03-17_223825.json
+sysid_sts3215_sin_time_square_2025-03-17_225205.json
+sysid_sts3215_up_and_down_2025-03-17_225034.json
+sysid_sts3215_sin_sin_2025-03-17_224323.json
+sysid_sts3215_sin_sin_2025-03-17_224636.json
+sysid_sts3215_sin_time_square_2025-03-17_225507.json
+sysid_sts3215_brutal_2025-03-17_225700.json
+sysid_sts3215_brutal_2025-03-17_225757.json
+sysid_sts3215_sin_sin_2025-03-17_224312.json
+sysid_sts3215_lift_and_drop_2025-03-17_223859.json
+sysid_sts3215_lift_and_drop_2025-03-17_224129.json
+sysid_sts3215_sin_time_square_2025-03-17_225541.json
+sysid_sts3215_brutal_2025-03-17_225649.json
+sysid_sts3215_lift_and_drop_2025-03-17_224152.json
+sysid_sts3215_sin_time_square_2025-03-17_225347.json
+sysid_sts3215_lift_and_drop_2025-03-17_223911.json
+sysid_sts3215_up_and_down_2025-03-17_225120.json
+sysid_sts3215_up_and_down_2025-03-17_224818.json
+sysid_sts3215_sin_sin_2025-03-17_224431.json
+sysid_sts3215_sin_time_square_2025-03-17_225239.json
+sysid_sts3215_up_and_down_2025-03-17_224926.json
+sysid_sts3215_brutal_2025-03-17_230036.json
+sysid_sts3215_brutal_2025-03-17_225808.json
+sysid_sts3215_sin_time_square_2025-03-17_225444.json
+sysid_sts3215_sin_sin_2025-03-17_224647.json
+sysid_sts3215_sin_time_square_2025-03-17_225433.json
+sysid_sts3215_sin_sin_2025-03-17_224539.json
+sysid_sts3215_lift_and_drop_2025-03-17_224237.json
+sysid_sts3215_lift_and_drop_2025-03-17_224020.json
+sysid_sts3215_up_and_down_2025-03-17_225045.json
+sysid_sts3215_brutal_2025-03-17_225916.json
+sysid_sts3215_sin_sin_2025-03-17_224613.json
+sysid_sts3215_brutal_2025-03-17_225939.json
+sysid_sts3215_sin_time_square_2025-03-17_225518.json
+sysid_sts3215_sin_time_square_2025-03-17_225324.json
+sysid_sts3215_up_and_down_2025-03-17_225142.json
+sysid_sts3215_up_and_down_2025-03-17_225011.json
+sysid_sts3215_up_and_down_2025-03-17_225154.json
+sysid_sts3215_sin_sin_2025-03-17_224516.json
+sysid_sts3215_lift_and_drop_2025-03-17_223945.json
+sysid_sts3215_sin_time_square_2025-03-17_225216.json
+sysid_sts3215_brutal_2025-03-17_225831.json
+sysid_sts3215_lift_and_drop_2025-03-17_224054.json
+sysid_sts3215_lift_and_drop_2025-03-17_224214.json
+sysid_sts3215_sin_sin_2025-03-17_224408.json
+sysid_sts3215_brutal_2025-03-17_225734.json
+sysid_sts3215_sin_sin_2025-03-17_224721.json
+sysid_sts3215_sin_time_square_2025-03-17_225410.json
+sysid_sts3215_lift_and_drop_2025-03-17_224203.json
+sysid_sts3215_brutal_2025-03-17_225723.json
+sysid_sts3215_sin_sin_2025-03-17_224624.json
+sysid_sts3215_up_and_down_2025-03-17_224733.json
+sysid_sts3215_brutal_2025-03-17_230059.json
+sysid_sts3215_up_and_down_2025-03-17_224949.json
+sysid_sts3215_sin_time_square_2025-03-17_225313.json
+sysid_sts3215_lift_and_drop_2025-03-17_224043.json
+sysid_sts3215_lift_and_drop_2025-03-17_224106.json
+sysid_sts3215_sin_time_square_2025-03-17_225626.json
+sysid_sts3215_up_and_down_2025-03-17_224744.json
+sysid_sts3215_lift_and_drop_2025-03-17_223837.json
+sysid_sts3215_up_and_down_2025-03-17_224841.json
+sysid_sts3215_sin_sin_2025-03-17_224346.json
+sysid_sts3215_brutal_2025-03-17_230002.json
+sysid_sts3215_sin_time_square_2025-03-17_225302.json
+sysid_sts3215_lift_and_drop_2025-03-17_224140.json
+sysid_sts3215_lift_and_drop_2025-03-17_224117.json
+sysid_sts3215_brutal_2025-03-17_230025.json
+sysid_sts3215_sin_sin_2025-03-17_224357.json
+sysid_sts3215_brutal_2025-03-17_225712.json
+sysid_sts3215_up_and_down_2025-03-17_224915.json
+sysid_sts3215_sin_sin_2025-03-17_224300.json
+sysid_sts3215_up_and_down_2025-03-17_224807.json
+sysid_sts3215_brutal_2025-03-17_230013.json
+sysid_sts3215_up_and_down_2025-03-17_224903.json
+sysid_sts3215_sin_time_square_2025-03-17_225359.json
+sysid_sts3215_brutal_2025-03-17_225905.json
+sysid_sts3215_lift_and_drop_2025-03-17_224249.json
+sysid_sts3215_up_and_down_2025-03-17_224755.json
+sysid_sts3215_lift_and_drop_2025-03-17_223922.json
+sysid_sts3215_lift_and_drop_2025-03-17_223934.json
+sysid_sts3215_sin_sin_2025-03-17_224454.json
+sysid_sts3215_sin_sin_2025-03-17_224550.json
+sysid_sts3215_up_and_down_2025-03-17_225000.json
+sysid_sts3215_sin_sin_2025-03-17_224442.json
+sysid_sts3215_up_and_down_2025-03-17_225057.json
+sysid_sts3215_sin_sin_2025-03-17_224710.json
+sysid_sts3215_sin_time_square_2025-03-17_225421.json
+sysid_sts3215_brutal_2025-03-17_225928.json
+sysid_sts3215_lift_and_drop_2025-03-17_224008.json
+sysid_sts3215_sin_sin_2025-03-17_224602.json
+sysid_sts3215_up_and_down_2025-03-17_225108.json
+sysid_sts3215_sin_time_square_2025-03-17_225552.json
+sysid_sts3215_brutal_2025-03-17_225637.json
+sysid_sts3215_sin_sin_2025-03-17_224659.json
+sysid_sts3215_sin_time_square_2025-03-17_225529.json
+sysid_sts3215_sin_time_square_2025-03-17_225250.json
+sysid_sts3215_brutal_2025-03-17_225820.json
+--------------------------------------------------
+
+
+
+
+###### STS_3215_V12_20250317 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+##############################
+
+--- [M6] --- LuGre Model (Full friction dynamics) [ ** Plot Book sts3215-12v_m6_id001.pdf ** ]
+[Trial 2998, Best score: 0.04148049308075751]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m6.json): 
+- kt: 3.6369825403161804 (min: 0.5, max: 10)
+- R: 7.128729817930333 (min: 0.1, max: 10)
+- armature: 0.02632138856229643 (min: 1e-05, max: 0.04)
+- q_offset: -0.004706436809067072 (min: -0.2, max: 0.2)
+- friction_base: 0.08348473004617794 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.056767433052009625 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.06916174377701191 (min: 0.0, max: 0.5)
+- load_friction_external: 0.027414237037656476 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.21625644568250454 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.024696353690823944 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.0013242901061535307 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.005187816168896046 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 1.7896416054060968 (min: 0.01, max: 3.0)
+- alpha: 0.5844777005462408 (min: 0.5, max: 3.0)
+- friction_viscous: 0.041641470721366765 (min: 0.0, max: 1.0)
+- model: m6
+- actuator: sts3215v12
+
+
+###### STS_3215_V12_20250317 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)
+####################
+
+--- [ M6 ] ---  [ ** Plot Book sts3215-12v_m6_id002.pdf ** ]
+[Trial 2997, Best score: 0.034166136343090944]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m6.json): 
+- kt: 3.52358056072592 (min: 0.5, max: 10)
+- R: 7.086839602880564 (min: 0.1, max: 10)
+- armature: 0.0268854026084728 (min: 1e-05, max: 0.04)
+- q_offset: -0.010718545782392647 (min: -0.2, max: 0.2)
+- friction_base: 0.08548629922730104 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.08897330548567466 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.2314753432037323 (min: 0.0, max: 0.5)
+- load_friction_external: 3.7571227715005675e-05 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.2634474460020998 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.17972393985443183 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.004379315560295965 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.00782815955047648 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 0.039005757579577124 (min: 0.01, max: 3.0)
+- alpha: 0.7798907043889494 (min: 0.5, max: 3.0)
+- friction_viscous: 0.05021508345158386 (min: 0.0, max: 1.0)
+- model: m6
+- actuator: sts3215v12
+
+
+###### STS_3215_V12_20250317 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)
+# Cut Lift And Drop (4-6 sec)
+# Removed Data with spurious spikes
+####################
+
+--- [ M6 ] --- [ ** Plot Book sts3215-12v_m6_id003.pdf ** ]
+[Trial 5999, Best score: 0.03313457057546198]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m6.json): 
+- kt: 3.551201269503461 (min: 0.5, max: 10)
+- R: 7.16721687137772 (min: 0.1, max: 10)
+- armature: 0.027024860627118844 (min: 1e-05, max: 0.04)
+- q_offset: -0.006630436369675474 (min: -0.2, max: 0.2)
+- friction_base: 0.10357862687907629 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.029562560763771346 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.20103340228255945 (min: 0.0, max: 0.5)
+- load_friction_external: 4.489694722690258e-06 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.34678620415344963 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.0829219857451941 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.004854722167817332 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.008476104309601258 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 0.03960665276359746 (min: 0.01, max: 3.0)
+- alpha: 0.6221333198718811 (min: 0.5, max: 3.0)
+- friction_viscous: 0.04352537436132012 (min: 0.0, max: 1.0)
+- model: m6
+- actuator: sts3215v12
+
+###### STS_3215_V12_20250317 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)  (backlash+high kp causing oscillations after step input)
+# Cut Lift And Drop (4-6 sec) (lot of dead time afterwards, doesn't seem right to make the model attempt to fit this)
+# Removed Data with spurious spikes
+# Cut Brutal Trajectory (3.5-4sec) (backlash+high kp causing oscillations after step input)
+# Cut Lift and Drop Trajectory for Arm Length=100mm (3.5-4sec) This seems to be a region that is not capturing the dynamics anymore...
+####################
+
+--- [ M6 ] ---
+[Trial 9996, Best score: 0.0309255056643509]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m6.json): 
+- kt: 3.5692264562199068 (min: 0.5, max: 10)
+- R: 7.212036587785826 (min: 0.1, max: 10)
+- armature: 0.02813549222227489 (min: 1e-05, max: 0.04)
+- q_offset: -0.014611158506458277 (min: -0.2, max: 0.2)
+- friction_base: 0.002953330162537975 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.07486714455675327 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.270148948771484 (min: 0.0, max: 0.5)
+- load_friction_external: 2.5105649759323697e-06 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.32815501379333595 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 2.7456585993214123e-05 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.007398798686112804 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.0036419415666769667 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 0.06150755075755025 (min: 0.01, max: 3.0)
+- alpha: 0.8525195068298919 (min: 0.5, max: 3.0)
+- friction_viscous: 0.0752949271698863 (min: 0.0, max: 1.0)
+- model: m6
+- actuator: sts3215v12
+
+###### STS_3215_V12_20250317 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)  (backlash+high kp causing oscillations after step input)
+# Cut Lift And Drop (4-6 sec) (lot of dead time afterwards, doesn't seem right to make the model attempt to fit this)
+# Removed Data with spurious spikes
+# Cut Brutal Trajectory (3.5-4sec) (backlash+high kp causing oscillations after step input)
+# Cut Lift and Drop Trajectory for Arm Length=100mm (3.5-4sec) This seems to be a region that is not capturing the dynamics anymore...
+# Consolidated to 2 repetitions (move remaining data for validation)
+####################
+
+--- [ M1 ] ---
+[Trial 4990, Best score: 0.03233469813313716]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m1.json): 
+- kt: 3.6070648958284464 (min: 0.5, max: 10)
+- R: 9.817457446450632 (min: 0.1, max: 10)
+- armature: 0.027772754874253427 (min: 1e-05, max: 0.04)
+- q_offset: -0.013635714684196248 (min: -0.2, max: 0.2)
+- friction_base: 0.05283175681661876 (min: 0.0, max: 0.2)
+- friction_viscous: 0.05902373678644679 (min: 0.0, max: 1.0)
+- model: m1
+- actuator: sts3215v12
+
+--- [ M2 ] ---
+[Trial 4997, Best score: 0.03161751773889789]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m2.json): 
+- kt: 3.634805774509037 (min: 0.5, max: 10)
+- R: 9.784809034276668 (min: 0.1, max: 10)
+- armature: 0.027688893594746772 (min: 1e-05, max: 0.04)
+- q_offset: -0.01628360005292734 (min: -0.2, max: 0.2)
+- friction_base: 0.006867898305963405 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.1998979141618188 (min: 0.0, max: 0.2)
+- dtheta_stribeck: 0.1432382997896992 (min: 0.01, max: 3.0)
+- alpha: 2.6700587108095992 (min: 0.5, max: 3.0)
+- friction_viscous: 0.07419365466389047 (min: 0.0, max: 1.0)
+- model: m2
+- actuator: sts3215v12
+
+--- [ M3 ] ---
+[Trial 4999, Best score: 0.03200323389145249]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m3.json): 
+- kt: 3.6000919978023793 (min: 0.5, max: 10)
+- R: 9.027211699120349 (min: 0.1, max: 10)
+- armature: 0.026955301983553615 (min: 1e-05, max: 0.04)
+- q_offset: -0.01330958805611579 (min: -0.2, max: 0.2)
+- friction_base: 0.04362715825639339 (min: 0.0, max: 0.2)
+- load_friction_base: 0.05661989174630855 (min: 0.0, max: 0.5)
+- friction_viscous: 0.053740783324918814 (min: 0.0, max: 1.0)
+- model: m3
+- actuator: sts3215v12
+
+
+--- [ M4 ] ---
+[Trial 4997, Best score: 0.03128150090629824]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m4.json): 
+- kt: 3.644392269842212 (min: 0.5, max: 10)
+- R: 8.78872549984459 (min: 0.1, max: 10)
+- armature: 0.026562450412688003 (min: 1e-05, max: 0.04)
+- q_offset: -0.015349145346086168 (min: -0.2, max: 0.2)
+- friction_base: 0.02343128488450586 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.11993431270067341 (min: 0.0, max: 0.2)
+- load_friction_base: 0.04760430637691601 (min: 0.0, max: 0.5)
+- load_friction_stribeck: 0.2975146535010436 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.05531727680943176 (min: 0.01, max: 3.0)
+- alpha: 0.8707805280644854 (min: 0.5, max: 3.0)
+- friction_viscous: 0.0616252905327677 (min: 0.0, max: 1.0)
+- model: m4
+- actuator: sts3215v12
+
+--- [ M5 ] ---  
+[Trial 4998, Best score: 0.030919910488931484]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m5.json): 
+- kt: 3.5627403264458 (min: 0.5, max: 10)
+- R: 7.572300973831643 (min: 0.1, max: 10)
+- armature: 0.02825455347700246 (min: 1e-05, max: 0.04)
+- q_offset: -0.014635507689475885 (min: -0.2, max: 0.2)
+- friction_base: 0.00032609339427433384 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.11929819160399074 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.23879093542726385 (min: 0.0, max: 0.5)
+- load_friction_external: 9.853631422503252e-05 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.30687183472840457 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.0005207597823679075 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.05700887234127092 (min: 0.01, max: 3.0)
+- alpha: 0.8001556519478448 (min: 0.5, max: 3.0)
+- friction_viscous: 0.0761299672186112 (min: 0.0, max: 1.0)
+- model: m5
+- actuator: sts3215v12
+
+--- [ M6 ] --- [ ** Plot Book sts3215-12v_m6_id004.pdf ** ]
+[Trial 4994, Best score: 0.030908780914591403]
+Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3215v12/params/m6.json): 
+- kt: 3.5555273246633123 (min: 0.5, max: 10)
+- R: 7.121368321925519 (min: 0.1, max: 10)
+- armature: 0.02826032533017913 (min: 1e-05, max: 0.04)
+- q_offset: -0.01404450499190868 (min: -0.2, max: 0.2)
+- friction_base: 6.042148883943358e-05 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.08398340995916803 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.28917712797087186 (min: 0.0, max: 0.5)
+- load_friction_external: 1.8515755263182573e-05 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.298526928956707 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 4.4126842507694256e-05 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.008904885742751424 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.0020924537807346364 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 0.07478287148007708 (min: 0.01, max: 3.0)
+- alpha: 1.2952094485783678 (min: 0.5, max: 3.0)
+- friction_viscous: 0.07619905694246727 (min: 0.0, max: 1.0)
+- model: m6
+- actuator: sts3215v12
