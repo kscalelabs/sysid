@@ -1,0 +1,55 @@
+sysid:
+  # Hardware configuration
+  actuator_id: 11
+  motor_name: "sts3215v12"
+  ip: "192.168.42.1"
+  
+#---------------------------
+ # Disc Mass Table
+  # A = 1.122
+  # B = 0.446
+  # C = 0.446999
+  # D = 0.21817793
+#---------------------------
+  # Pin Mass Table
+  # A = 0.057
+#---------------------------  
+  # Spacer Mass Table
+  # BC/BD/CD = 0.019
+  # B,C,D = 0.032
+#---------------------------
+  # Arm Mass Table
+  # 100mm = 0.036
+  # 150mm = 0.050
+#---------------------------
+  # Pendulum parameters
+  # Mass in kg
+  # Length in meters
+  # Weights B, C and D used in the experiment
+#---------------------------
+  # Mass components:
+    # disc mass: 1.1112
+    # pin mass: 0.057
+    # spacers mass: 0.0 (no spaces used)
+    # total point mass: 1.1682
+    # arm mass: 0.036
+#---------------------------
+  mass: 1.1682
+  arm_mass: 0.036
+  length: 0.100
+  
+  # Motor parameters
+  error_gain: 0.16489
+  winding_resistance: 1.0
+  torque_constant: 1.0787
+  
+  # Test configuration
+  repetitions: 4
+  kp_values: [4, 8, 12, 16, 24, 32]
+  trajectories: 
+    - "lift_and_drop"
+    - "up_and_down"
+    - "sin_time_square"
+    - "brutal"
+    - "sin_sin"
+ 
