@@ -102,11 +102,11 @@ friction_viscous: 0.0762
 
 | Model | Best Score | Parameters | Notes |
 |-------|------------|------------|-------|
-| M1 | 0.0323 | [m1.json](params/m1.json) | Consolidated dataset (final) |
-| M2 | 0.0316 | [m2.json](params/m2.json) | Consolidated dataset (final) |
-| M3 | 0.0320 | [m3.json](params/m3.json) | Consolidated dataset (final) |
-| M4 | 0.0313 | [m4.json](params/m4.json) | Consolidated dataset (final) |
-| M5 | 0.0309 | [m5.json](params/m5.json) | Consolidated dataset (final) |
+| M1 | 0.0323 | [m1.json](friction_params/m1.json) | Consolidated dataset (final) |
+| M2 | 0.0316 | [m2.json](friction_params/m2.json) | Consolidated dataset (final) |
+| M3 | 0.0320 | [m3.json](friction_params/m3.json) | Consolidated dataset (final) |
+| M4 | 0.0313 | [m4.json](friction_params/m4.json) | Consolidated dataset (final) |
+| M5 | 0.0309 | [m5.json](friction_params/m5.json) | Consolidated dataset (final) |
 
 ### Important Notes on Data Trimming
 - **Brutal trajectory segments** removed due to backlash and oscillations at high KP values.
