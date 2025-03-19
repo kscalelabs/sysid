@@ -164,33 +164,5 @@ Force range: 9.400899271795291
 Kp: 49.28477848634313
 Friction loss: 1.687509618663902e-07
 Damping: 2.0646938310069753
-
-## File Structure
-
-```
-sysid-results/
-├── data/
-│   └── feetech/
-│       └── STS_3215_12V/
-│           ├── experiment_configs/
-│           ├── raw/
-│           ├── processed/
-│           ├── plots/
-│           ├── friction_params/
-│           │   ├── m1.json
-│           │   ├── m2.json
-│           │   ├── m3.json
-│           │   ├── m4.json
-│           │   ├── m5.json
-│           │   └── m6.json
-│           ├── README.md
-│           └── NOTES.txt
-├── scripts/
-├── simulation_examples/
-└── docs/
-```
-
----
-
 **See individual JSON parameter files in `friction_params/` for fitted friction and dynamic parameters per model.**
 
