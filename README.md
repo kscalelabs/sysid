@@ -1,2 +1,1 @@
-# sysid-results
-Actuator System Identification (SysID) results.
+Cataloged System Identification for various actuators.
