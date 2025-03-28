@@ -1,42 +1,33 @@
+#------------------------------------------------------------------------------
+# ktune configuration file for sim2real system identification
+#
+# Testbed: Pendulum setup — see `Sysid_Testbed_Setup.xlsx` for physical parameters.
+# Purpose: Used with ktune to drive and record trajectory for system identification.
+#
+# Notes for users:
+#   - Units are SI (meters, kilograms, seconds, newtons, radians)
+#---------------------------#---------------------------#---------------------------
+# Testbed: Pendulum (see Pendulum_Testbed_Configurations.xlsx for details)
+# Mass in kg
+# Inertia in kg*m^2
+# Length in meters
+# Configuration
+    # Disc_BC
+    # Axle_A
+    # Spacer_Set1 (BC,BD,CD)
+    # Arm_A (100mm)
+#---------------------------
 sysid:
   # Hardware configuration
   actuator_id: 11
   motor_name: "sts3215v12"
   ip: "192.168.42.1"
 
-#---------------------------
-  # Disc Mass Table
-  # A = 1.122
-  # B = 0.446
-  # C = 0.446999
-  # D = 0.21817793
-#---------------------------
-  # Pin Mass Table
-  # A = 0.057
-#---------------------------
-  # Spacer Mass Table
-  # BC/BD/CD = 0.019
-  # B,C,D = 0.032
-#---------------------------
-  # Arm Mass Table
-  # 100mm = 0.036
-  # 150mm = 0.050
-#---------------------------
-  # Pendulum parameters
-  # Mass in kg
-  # Length in meters
-  # Weights B and C  used in the experiment
-#---------------------------
-  # Mass components:
-    # disc mass: 0.893
-    # pin mass: 0.057
-    # spacers mass: 0.019 (bc/cd spacer set)
-    # total point mass: 0.969
-    # arm mass: 0.036     (100mm arms)
-#---------------------------
-  mass: 0.969
-  arm_mass: 0.036
+  # Pendulum Params
+  total_inertia: 0.012182358
+  total_g_bias: -0.967748572
   length: 0.100
+  mass: 0.968999
   
   # Motor parameters
   error_gain: 0.16489

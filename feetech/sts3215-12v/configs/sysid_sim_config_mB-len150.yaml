@@ -1,4 +1,12 @@
-sysid:
+#------------------------------------------------------------------------------
+# ktune configuration file for sim2real system identification
+#
+# Testbed: Pendulum setup — see `Sysid_Testbed_Setup.xlsx` for physical parameters.
+# Purpose: Used with ktune to drive and record trajectory for system identification.
+#
+# Notes for users:
+#   - Units are SI (meters, kilograms, seconds, newtons, radians)
+#---------------------------#---------------------------sysid:
   # Hardware configuration
   actuator_id: 11
   motor_name: "sts3215v12"
