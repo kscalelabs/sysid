@@ -1,0 +1,69 @@
+--- [ M1 ] ---
+Reading model of type m1 from params/id005-params/m1.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 8.554856699238002
+- armature: 0.014265666834579369
+- kp: 44.69048406884213
+- damping: 1.4328891289044317
+- frictionloss: 0.0001655675138131945
+
+--- [ M2 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m2)
+
+Reading model of type m2 from params/id005-params/m2.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 10.373168813495864
+- armature: 0.012800168500263347
+- kp: 54.18932799239515
+- damping: 1.572552033400564
+- frictionloss: 7.439884230410083e-09
+
+--- [ M3 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m3)
+
+Reading model of type m3 from params/id005-params/m3.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 17.050800063447387
+- armature: 0.007592025385589339
+- kp: 89.0732054768821
+- damping: 2.5662226707853963
+- frictionloss: 0.005023757560035487
+
+--- [ M4 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m4)
+
+Reading model of type m4 from params/id005-params/m4.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 18.08136882469798
+- armature: 0.006527266361102986
+- kp: 94.45688616560928
+- damping: 2.7159867650024614
+- frictionloss: 0.00039291393117963893
+
+--- [ M5 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m5)
+
+Reading model of type m5 from params/id005-params/m5.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 11.818947407549699
+- armature: 0.0071371865307160364
+- kp: 61.74206060922449
+- damping: 1.7982152047715987
+- frictionloss: 0.006742447729884787
+
+--- [ M6 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m6)
+
+Reading model of type m6 from params/id005-params/m6.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 11.822376793004937
+- armature: 0.0071589767266349745
+- kp: 61.759975683835485
+- damping: 1.7951887724602806
+- frictionloss: 0.0028099362553280294
