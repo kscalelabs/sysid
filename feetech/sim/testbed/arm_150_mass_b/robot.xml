@@ -5,11 +5,6 @@
   <compiler angle="radian" meshdir="assets" autolimits="true"/>
   <default>
     <default class="arm_150_mass_b">
-       <joint 
-        armature="0.026176125067127395" 
-        frictionloss="0.09090098640882"
-        damping="1.2965935100389328"
-      />
       <default class="visual">
         <geom type="mesh" contype="0" conaffinity="0" group="2"/>
       </default>
@@ -73,7 +68,7 @@
     <material name="arm_rear__configuration__1lb_material" rgba="0.647059 0.647059 0.647059 1"/>
   </asset>
   <actuator>
-      <motor class="arm_150_mass_b" name="sts3215_ctrl" joint="sts3215" gear="1" forcerange="-5.890154259732506 5.890154259732506"/>
+      <motor class="arm_150_mass_b" name="sts3215_ctrl" joint="sts3215" gear="1"/>
   </actuator>
   <equality/>
 </mujoco>
