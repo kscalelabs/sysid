@@ -1295,3 +1295,444 @@ Best params found (saved to /Users/scott/Documents/kscale/sysid/sts3250/params/m
 - friction_viscous: 0.012227709617860084 (min: 0.0, max: 1.0)
 - model: m6
 - actuator: sts3250
+
+
+###### STS_3250_V12_20250319 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)
+# Cut Lift and Drop (4-6 sec)
+# Removed data with spurious spikes
+# Cut Lift and Drop w/ 100mm arm length (3.5-4sec)
+# Removed a few high KP sin time squared tests that failed (motor stalled)
+# Cut Brutal (0-0.4sec)
+# Cut Lift and Drop (3.5-4sec)
+# Opened up kT search window (max=10 was 2.5) ** noticed it was hitting up against ceiling during previous fit attempts
+# Modified Actautor Motor resistance init guess to 1.2ohm
+# Removed Lift and Drop run for length=0.15 mass=0.74117694 (This was performed during a mechanical binding issue with servo horn, i think this is not good representation of dynamics)
+# Consolidate to 2 reps per conditions
+# Added improved inertial calculations (previously assuming point mass on end of uniform rod)
+# Utilizing Rhoban BAM Error Gain Ratio Parameter along with Velocity Max Parameter
+###############################
+
+--- [M1] ---    [ID005]
+[Trial 4825, Best score: 0.029082525768672738]
+Best params found (saved to params/id005-params/m1.json): 
+- kt: 1.7645844239918587 (min: 0.05, max: 2.5)
+- error_gain_ratio: 0.8787609136488267 (min: 0.1, max: 10.0)
+- R: 2.107555162927054 (min: 0.1, max: 10.0)
+- armature: 0.01289506832118832 (min: 1e-05, max: 0.04)
+- q_offset: 0.062063956912184554 (min: -0.1, max: 0.1)
+- max_velocity: 7.677325093198767 (min: 0.521553467881118, max: 52.1553467881118)
+- friction_base: 5.8164821835861985e-12 (min: 0.0, max: 0.2)
+- friction_viscous: 0.05524266232975406 (min: 0.0, max: 1.0)
+- score: 0.029082525768672738
+- trial_number: 4825
+- model: m1
+- actuator: sts3250
+
+** automated this, and we store trials and score inside param results m(n).json 
+--- [M2] ---    [ID005]
+--- [M3] ---    [ID005]
+--- [M4] ---    [ID005]
+--- [M5] ---    [ID005]
+--- [M6] ---    [ID005]
+
+
+###### STS_3250_V12_20250319 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)
+# Cut Lift and Drop (4-6 sec)
+# Removed data with spurious spikes
+# Cut Lift and Drop w/ 100mm arm length (3.5-4sec)
+# Removed a few high KP sin time squared tests that failed (motor stalled)
+# Cut Brutal (0-0.4sec)
+# Cut Lift and Drop (3.5-4sec)
+# Opened up kT search window (max=10 was 2.5) ** noticed it was hitting up against ceiling during previous fit attempts
+# Modified Actautor Motor resistance init guess to 1.2ohm
+# Removed Lift and Drop run for length=0.15 mass=0.74117694 (This was performed during a mechanical binding issue with servo horn, i think this is not good representation of dynamics)
+# Consolidate to 2 reps per conditions
+# Added improved inertial calculations (previously assuming point mass on end of uniform rod)
+# Utilizing Rhoban Velocity Max Parameter
+# Replaced Rhoban Error Gain Ratio Parameter for true Error Gain Curve (Cubic Spline Fit) See: sts3250_ErrorGain_Measurements.xlsx (csv used for spline fit)
+###############################
+
+** automated this, and we store trials and score inside param results m(n).json 
+--- [M2] ---    [ID005]
+--- [M2] ---    [ID005]
+--- [M3] ---    [ID005]
+--- [M4] ---    [ID005]
+--- [M5] ---    [ID005]
+--- [M6] ---    [ID005]
+
+###### STS_3250_V12_20250319 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)
+# Cut Lift and Drop (4-6 sec)
+# Removed data with spurious spikes
+# Cut Lift and Drop w/ 100mm arm length (3.5-4sec)
+# Removed a few high KP sin time squared tests that failed (motor stalled)
+# Cut Brutal (0-0.4sec)
+# Cut Lift and Drop (3.5-4sec)
+# Opened up kT search window (max=10 was 2.5) ** noticed it was hitting up against ceiling during previous fit attempts
+# Modified Actautor Motor resistance init guess to 1.2ohm
+# Removed Lift and Drop run for length=0.15 mass=0.74117694 (This was performed during a mechanical binding issue with servo horn, i think this is not good representation of dynamics)
+# Consolidate to 2 reps per conditions
+# Added improved inertial calculations (previously assuming point mass on end of uniform rod)
+# Utilizing Rhoban Velocity Max Parameter
+# Replaced Rhoban Error Gain Ratio Parameter for true Error Gain Curve (Cubic Spline Fit) See: sts3250_ErrorGain_Measurements.xlsx (csv used for spline fit)
+# Fixed Max Velocity was using 3215 value. 3250 --> 7.85 rad/s --> 75rpm
+###############################
+
+
+--- [M1] ---    [ID006]
+[Trial 4995, Best score: 0.029509862648029597]
+Best params found (saved to params/id007-params/m2.json): 
+- kt: 1.9492416822758456 (min: 0.05, max: 2.5)
+- R: 2.685460318591523 (min: 0.1, max: 10.0)
+- armature: 0.012806258511725545 (min: 1e-05, max: 0.04)
+- q_offset: 0.05912721750281616 (min: -0.1, max: 0.1)
+- max_velocity: 8.015211044976606 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.0004895768421154265 (min: 0.0, max: 0.2)
+- friction_viscous: 0.055586718580439294 (min: 0.0, max: 1.0)
+- score: 0.029509862648029597
+- trial_number: 4995
+- model: m1
+- actuator: sts3250
+
+--- [M2] ---    [ID006]
+
+
+--- [M3] ---    [ID006]
+
+[Trial 4996, Best score: 0.026818414732523936]
+Best params found (saved to params/id006-params/m3.json): 
+- kt: 1.8987154497638647 (min: 0.05, max: 2.5)
+- R: 1.4939321894404491 (min: 0.1, max: 10.0)
+- armature: 0.007942204627219496 (min: 1e-05, max: 0.04)
+- q_offset: 0.026065034376921925 (min: -0.1, max: 0.1)
+- max_velocity: 7.524272736176864 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 2.07016784104026e-11 (min: 0.0, max: 0.2)
+- load_friction_base: 0.31997034355289516 (min: 0.0, max: 0.5)
+- friction_viscous: 0.017679278398319988 (min: 0.0, max: 1.0)
+- score: 0.026818414732523936
+- trial_number: 4996
+- model: m3
+- actuator: sts3250
+
+--- [M4] ---    [ID005]
+[Trial 4996, Best score: 0.02664310279208674]
+Best params found (saved to params/id006-params/m4.json): 
+- kt: 1.8980673128917993 (min: 0.05, max: 2.5)
+- R: 1.449589643148714 (min: 0.1, max: 10.0)
+- armature: 0.0074986764424944076 (min: 1e-05, max: 0.04)
+- q_offset: 0.022442168667376805 (min: -0.1, max: 0.1)
+- max_velocity: 7.4985281107851005 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 5.057930627273787e-07 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.12823589841275557 (min: 0.0, max: 0.2)
+- load_friction_base: 0.32642241999046534 (min: 0.0, max: 0.5)
+- load_friction_stribeck: 0.25713531888633673 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.015265217905133677 (min: 0.01, max: 3.0)
+- alpha: 2.985693876066932 (min: 0.5, max: 3.0)
+- friction_viscous: 0.017390601335548966 (min: 0.0, max: 1.0)
+- score: 0.02664310279208674
+- trial_number: 4996
+- model: m4
+- actuator: sts3250
+
+--- [M5] ---    [ID005]
+[Trial 4999, Best score: 0.02645103900407348]
+Best params found (saved to params/id006-params/m5.json): 
+- kt: 1.9200391146406697 (min: 0.05, max: 2.5)
+- R: 2.1458871237281647 (min: 0.1, max: 10.0)
+- armature: 0.00750453908072898 (min: 1e-05, max: 0.04)
+- q_offset: 0.02514037289238269 (min: -0.1, max: 0.1)
+- max_velocity: 7.614102204403149 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 7.5804570364435625e-06 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.01734556592005141 (min: 0.0, max: 0.2)
+- load_friction_motor: 6.78630205160204e-05 (min: 0.0, max: 0.5)
+- load_friction_external: 0.3395145538784466 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 1.3596026975434415e-06 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 1.282145629195621e-05 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 2.003086529555353 (min: 0.01, max: 3.0)
+- alpha: 0.663473290124805 (min: 0.5, max: 3.0)
+- friction_viscous: 0.014711798235886211 (min: 0.0, max: 1.0)
+- score: 0.02645103900407348
+- trial_number: 4999
+- model: m5
+- actuator: sts3250
+--- [M6] ---    [ID005]
+
+
+###### STS_3250_V12_20250319 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)
+# Cut Lift and Drop (4-6 sec)
+# Removed data with spurious spikes
+# Cut Lift and Drop w/ 100mm arm length (3.5-4sec)
+# Removed a few high KP sin time squared tests that failed (motor stalled)
+# Cut Brutal (0-0.4sec)
+# Cut Lift and Drop (3.5-4sec)
+# Opened up kT search window (max=10 was 2.5) ** noticed it was hitting up against ceiling during previous fit attempts
+# Modified Actautor Motor resistance init guess to 1.2ohm
+# Removed Lift and Drop run for length=0.15 mass=0.74117694 (This was performed during a mechanical binding issue with servo horn, i think this is not good representation of dynamics)
+# Consolidate to 2 reps per conditions
+# Added improved inertial calculations (previously assuming point mass on end of uniform rod)
+# Utilizing Rhoban Velocity Max Parameter
+# Replaced Rhoban Error Gain Ratio Parameter for true Error Gain Curve (Cubic Spline Fit) See: sts3250_ErrorGain_Measurements.xlsx (csv used for spline fit)
+# Fixed Max Velocity was using 3215 value. 3250 --> 7.85 rad/s --> 75rpm
+# Restricting kT (torque constant) parameter close to it's specsheet 1.08
+###############################
+
+
+--- [M1] ---    [ID007]
+[Trial 4998, Best score: 0.04419991877161281]
+Best params found (saved to params/id007-params/m1.json): 
+- kt: 1.099999998775409 (min: 1, max: 1.1)
+- R: 1.7814346792997047 (min: 0.1, max: 10.0)
+- armature: 0.009744554737236163 (min: 1e-05, max: 0.04)
+- q_offset: 0.017860572134367453 (min: -0.1, max: 0.1)
+- max_velocity: 5.802598657934716 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.19999980159471642 (min: 0.0, max: 0.2)
+- friction_viscous: 0.017785138270027128 (min: 0.0, max: 1.0)
+- score: 0.04419991877161281
+- trial_number: 4998
+- model: m1
+- actuator: sts3250
+
+--- [M2] ---    [ID007]
+[Trial 4996, Best score: 0.043803049845346595]
+Best params found (saved to params/id007-params/m2.json): 
+- kt: 1.0999999249019108 (min: 1, max: 1.1)
+- R: 1.742133477732182 (min: 0.1, max: 10.0)
+- armature: 0.009675193549895442 (min: 1e-05, max: 0.04)
+- q_offset: 0.02124625530701811 (min: -0.1, max: 0.1)
+- max_velocity: 5.800702430620826 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.007149002617435785 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.19999967823269238 (min: 0.0, max: 0.2)
+- dtheta_stribeck: 2.99998957426845 (min: 0.01, max: 3.0)
+- alpha: 2.999963828664981 (min: 0.5, max: 3.0)
+- friction_viscous: 0.0522085895967562 (min: 0.0, max: 1.0)
+- score: 0.043803049845346595
+- trial_number: 4996
+- model: m2
+- actuator: sts3250
+
+--- [M3] ---    [ID007]
+[Trial 4996, Best score: 0.03894070186790629]
+Best params found (saved to params/id007-params/m3.json): 
+- kt: 1.099999996844785 (min: 1, max: 1.1)
+- R: 1.080152532914905 (min: 0.1, max: 10.0)
+- armature: 0.006817940126610458 (min: 1e-05, max: 0.04)
+- q_offset: 0.04041501923396121 (min: -0.1, max: 0.1)
+- max_velocity: 5.878170159024852 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.06143023132795096 (min: 0.0, max: 0.2)
+- load_friction_base: 0.339333118982138 (min: 0.0, max: 0.5)
+- friction_viscous: 1.1401348228688049e-08 (min: 0.0, max: 1.0)
+- score: 0.03894070186790629
+- trial_number: 4996
+- model: m3
+- actuator: sts3250
+
+--- [M4] ---    [ID007]
+[Trial 4995, Best score: 0.03889702142680764]
+Best params found (saved to params/id007-params/m4.json): 
+- kt: 1.0999997056095818 (min: 1, max: 1.1)
+- R: 1.0764364208725312 (min: 0.1, max: 10.0)
+- armature: 0.006742691353060887 (min: 1e-05, max: 0.04)
+- q_offset: 0.04068542905161171 (min: -0.1, max: 0.1)
+- max_velocity: 5.877053964983766 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.061964934457178183 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.031633089502406564 (min: 0.0, max: 0.2)
+- load_friction_base: 0.33829964007200414 (min: 0.0, max: 0.5)
+- load_friction_stribeck: 0.17190932641060264 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.01004142289066169 (min: 0.01, max: 3.0)
+- alpha: 2.7520620185742253 (min: 0.5, max: 3.0)
+- friction_viscous: 1.2051041194542325e-05 (min: 0.0, max: 1.0)
+- score: 0.03889702142680764
+- trial_number: 4995
+- model: m4
+- actuator: sts3250
+
+--- [M5] ---    [ID007]
+[Trial 4998, Best score: 0.03882351447132794]
+Best params found (saved to params/id007-params/m5.json): 
+- kt: 1.0999594183317205 (min: 1, max: 1.1)
+- R: 0.8519261881644303 (min: 0.1, max: 10.0)
+- armature: 0.0076438720929179055 (min: 1e-05, max: 0.04)
+- q_offset: 0.045724481504283154 (min: -0.1, max: 0.1)
+- max_velocity: 5.901271464543866 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.049703893190253104 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.0005838786226203367 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.49667269350230986 (min: 0.0, max: 0.5)
+- load_friction_external: 0.3079365245667331 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.00017718148950331033 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.00028444016953640283 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.3923834774618431 (min: 0.01, max: 3.0)
+- alpha: 0.6897822691413066 (min: 0.5, max: 3.0)
+- friction_viscous: 0.0054598144877617315 (min: 0.0, max: 1.0)
+- score: 0.03882351447132794
+- trial_number: 4998
+- model: m5
+- actuator: sts3250
+
+--- [M6] ---    [ID007]
+[Trial 4996, Best score: 0.039112602416875974]
+Best params found (saved to params/id007-params/m6.json): 
+- kt: 1.099977588216306 (min: 1, max: 1.1)
+- R: 1.1171390518022315 (min: 0.1, max: 10.0)
+- armature: 0.012139283001035341 (min: 1e-05, max: 0.04)
+- q_offset: 0.027881891084255372 (min: -0.1, max: 0.1)
+- max_velocity: 6.0064262923017235 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.04570421400422542 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.07897595580538387 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.4998043928343412 (min: 0.0, max: 0.5)
+- load_friction_external: 5.943625963808361e-05 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.04530693661414769 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.13703547145501818 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.0073263427199117504 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.0072248463994338185 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 0.010207858858027451 (min: 0.01, max: 3.0)
+- alpha: 1.6298840351625357 (min: 0.5, max: 3.0)
+- friction_viscous: 0.054131744923606416 (min: 0.0, max: 1.0)
+- score: 0.039112602416875974
+- trial_number: 4996
+- model: m6
+- actuator: sts3250
+
+###### STS_3250_V12_20250319 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)
+# Cut Lift and Drop (4-6 sec)
+# Removed data with spurious spikes
+# Cut Lift and Drop w/ 100mm arm length (3.5-4sec)
+# Removed a few high KP sin time squared tests that failed (motor stalled)
+# Cut Brutal (0-0.4sec)
+# Cut Lift and Drop (3.5-4sec)
+# Opened up kT search window (max=10 was 2.5) ** noticed it was hitting up against ceiling during previous fit attempts
+# Modified Actautor Motor resistance init guess to 1.2ohm
+# Removed Lift and Drop run for length=0.15 mass=0.74117694 (This was performed during a mechanical binding issue with servo horn, i think this is not good representation of dynamics)
+# Consolidate to 2 reps per conditions
+# Added improved inertial calculations (previously assuming point mass on end of uniform rod)
+# Utilizing Rhoban Velocity Max Parameter
+# Replaced Rhoban Error Gain Ratio Parameter for true Error Gain Curve (Cubic Spline Fit) See: sts3250_ErrorGain_Measurements.xlsx (csv used for spline fit)
+# Fixed Max Velocity was using 3215 value. 3250 --> 7.85 rad/s --> 75rpm
+# Restricting kT (torque constant) parameter close to it's specsheet 1.08
+# Skipping all Lift and Drop trajectories
+###############################
+
+
+--- [M1] ---    [ID008]
+[Trial 4995, Best score: 0.021825927001042567]
+Best params found (saved to params/id008-params/m1.json): 
+- kt: 1.0005874626213263 (min: 1, max: 1.1)
+- R: 1.3890462492623645 (min: 0.1, max: 10.0)
+- armature: 0.03999977737144798 (min: 1e-05, max: 0.04)
+- q_offset: -0.09617589756631056 (min: -0.1, max: 0.1)
+- max_velocity: 8.93762009169868 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.19999504581400715 (min: 0.0, max: 0.2)
+- friction_viscous: 0.6256393187557033 (min: 0.0, max: 1.0)
+- score: 0.021825927001042567
+- trial_number: 4995
+- model: m1
+- actuator: sts3250
+
+--- [M2] ---    [ID008]
+
+[Trial 4999, Best score: 0.021659409452862995]
+Best params found (saved to params/id008-params/m2.json): 
+- kt: 1.0025005359057135 (min: 1, max: 1.1)
+- R: 1.3033159121987539 (min: 0.1, max: 10.0)
+- armature: 0.039999854016697936 (min: 1e-05, max: 0.04)
+- q_offset: -0.09997855629137324 (min: -0.1, max: 0.1)
+- max_velocity: 8.683947196841883 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.19999573732746345 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.17708014992025317 (min: 0.0, max: 0.2)
+- dtheta_stribeck: 0.5566417487322255 (min: 0.01, max: 3.0)
+- alpha: 0.5000958461561987 (min: 0.5, max: 3.0)
+- friction_viscous: 0.6578229041943381 (min: 0.0, max: 1.0)
+- score: 0.021659409452862995
+- trial_number: 4999
+- model: m2
+- actuator: sts3250
+
+--- [M3] ---    [ID008]
+[Trial 4994, Best score: 0.02121857036314939]
+Best params found (saved to params/id008-params/m3.json): 
+- kt: 1.0999999957457818 (min: 1, max: 1.1)
+- R: 1.3885037135758198 (min: 0.1, max: 10.0)
+- armature: 0.039999999931445394 (min: 1e-05, max: 0.04)
+- q_offset: -0.09690736416276459 (min: -0.1, max: 0.1)
+- max_velocity: 8.610294621014713 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.18851447043129377 (min: 0.0, max: 0.2)
+- load_friction_base: 0.07782353333080219 (min: 0.0, max: 0.5)
+- friction_viscous: 0.5440237812680806 (min: 0.0, max: 1.0)
+- score: 0.02121857036314939
+- trial_number: 4994
+- model: m3
+- actuator: sts3250
+
+--- [M4] ---    [ID008]
+[Trial 4997, Best score: 0.02113385346213081]
+Best params found (saved to params/id008-params/m4.json): 
+- kt: 1.0994855682287412 (min: 1, max: 1.1)
+- R: 1.3806471046314437 (min: 0.1, max: 10.0)
+- armature: 0.03999993784945623 (min: 1e-05, max: 0.04)
+- q_offset: -0.07422352355036375 (min: -0.1, max: 0.1)
+- max_velocity: 8.511413476342232 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.12306058061477232 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.00010985520869379686 (min: 0.0, max: 0.2)
+- load_friction_base: 0.000649062127012495 (min: 0.0, max: 0.5)
+- load_friction_stribeck: 0.10096870334411663 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 1.31522659211745 (min: 0.01, max: 3.0)
+- alpha: 2.5750646283874836 (min: 0.5, max: 3.0)
+- friction_viscous: 0.6163381885320429 (min: 0.0, max: 1.0)
+- score: 0.02113385346213081
+- trial_number: 4997
+- model: m4
+- actuator: sts3250
+
+--- [M5] ---    [ID008]
+[Trial 4999, Best score: 0.020978629085780083]
+Best params found (saved to params/id008-params/m5.json): 
+- kt: 1.0816957303232293 (min: 1, max: 1.1)
+- R: 1.2400224304780278 (min: 0.1, max: 10.0)
+- armature: 0.039997893991326514 (min: 1e-05, max: 0.04)
+- q_offset: -0.091301835235375 (min: -0.1, max: 0.1)
+- max_velocity: 9.222690380863142 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.14063782817058204 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.024015733893653038 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.23823786005353156 (min: 0.0, max: 0.5)
+- load_friction_external: 5.5712498830913585e-05 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.04416144600370109 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.14404217071921369 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.010088940700519659 (min: 0.01, max: 3.0)
+- alpha: 1.875566162359483 (min: 0.5, max: 3.0)
+- friction_viscous: 0.5340177195262668 (min: 0.0, max: 1.0)
+- score: 0.020978629085780083
+- trial_number: 4999
+- model: m5
+- actuator: sts3250
+
+--- [M6] ---    [ID008]
+[Trial 4997, Best score: 0.020613102572907747]
+Best params found (saved to params/id008-params/m6.json): 
+- kt: 1.0621035837761907 (min: 1, max: 1.1)
+- R: 1.2941882549860493 (min: 0.1, max: 10.0)
+- armature: 0.03999986750770299 (min: 1e-05, max: 0.04)
+- q_offset: -0.011676725720958847 (min: -0.1, max: 0.1)
+- max_velocity: 8.59359707409921 (min: 0.7853981633974483, max: 78.53981633974483)
+- friction_base: 0.04978016152808182 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.13233286447065393 (min: 0.0, max: 0.2)
+- load_friction_motor: 7.033822110697391e-06 (min: 0.0, max: 0.5)
+- load_friction_external: 0.28654808415961763 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.000782269173045474 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.6670408309735762 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.008049310376386707 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.00498797437092432 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 0.02924451928327222 (min: 0.01, max: 3.0)
+- alpha: 2.5874626070372995 (min: 0.5, max: 3.0)
+- friction_viscous: 0.6503477704071557 (min: 0.0, max: 1.0)
+- score: 0.020613102572907747
+- trial_number: 4997
+- model: m6
+- actuator: sts3250

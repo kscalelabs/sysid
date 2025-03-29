@@ -7,7 +7,7 @@ Parameters export for MuJoCo, actuator sts3250
 - damping: 1.3464038511725651
 - frictionloss: 0.19999504581400715
 
---- [M2] ---
+(bam) scott@r2max4 sts3250 % python -m bam.to_mujoco --params params/id008-params/m2.json --vin 12.1 --kp 32
 WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m2)
 
 Reading model of type m2 from params/id008-params/m2.json
@@ -19,7 +19,7 @@ Parameters export for MuJoCo, actuator sts3250
 - damping: 1.4289385754484005
 - frictionloss: 0.19999573732746345
 
---- [M3] ---
+(bam) scott@r2max4 sts3250 % python -m bam.to_mujoco --params params/id008-params/m3.json --vin 12.1 --kp 32
 WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m3)
 
 Reading model of type m3 from params/id008-params/m3.json
@@ -31,7 +31,7 @@ Parameters export for MuJoCo, actuator sts3250
 - damping: 1.4154654481575422
 - frictionloss: 0.18851447043129377
 
---- [M4] ---
+(bam) scott@r2max4 sts3250 % python -m bam.to_mujoco --params params/id008-params/m4.json --vin 12.1 --kp 32
 WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m4)
 
 Reading model of type m4 from params/id008-params/m4.json
@@ -43,7 +43,8 @@ Parameters export for MuJoCo, actuator sts3250
 - damping: 1.491919291543865
 - frictionloss: 0.12306058061477232
 
---- [M5] ---1 can't be exported exactly to MuJoCo (model is m5)
+(bam) scott@r2max4 sts3250 % python -m bam.to_mujoco --params params/id008-params/m5.json --vin 12.1 --kp 32
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m5)
 
 Reading model of type m5 from params/id008-params/m5.json
 
@@ -57,8 +58,6 @@ Parameters export for MuJoCo, actuator sts3250
 (bam) scott@r2max4 sts3250 % python -m bam.to_mujoco --params params/id008-params/m6.json --vin 12.1 --kp 32
 WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m6)
 
-
---- [M6] ---
 Reading model of type m6 from params/id008-params/m6.json
 
 Parameters export for MuJoCo, actuator sts3250
