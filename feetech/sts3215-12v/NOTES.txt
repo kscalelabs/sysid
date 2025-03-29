@@ -1873,3 +1873,134 @@ Best params found (saved to params/id008-params/m6.json):
 - model: m6
 - actuator: sts3215_12v
 
+###### STS_3215_V12_20250317 #######
+# Post Process, 100hz data to 200hz (with linear interpolation)
+# Cut Brutal Trajectory (0-1sec,  4-6sec)  (backlash+high kp causing oscillations after step input)
+# Cut Lift And Drop (4-6 sec) (lot of dead time afterwards, doesn't seem right to make the model attempt to fit this)
+# Removed Data with spurious spikes
+# Cut Brutal Trajectory (3.5-4sec) (backlash+high kp causing oscillations after step input)
+# Cut Lift and Drop Trajectory for Arm Length=100mm (3.5-4sec) This seems to be a region that is not capturing the dynamics anymore...
+# Consolidated to 2 repetitions (move remaining data for validation)
+# Discovered missing arm_mass fields (and software was setting to zero). added arm_mass to dataset
+# Included more accurate inertial calculations (see Pendulum_Testbed_Configurations.xlsx)
+# Removed error_gain_ratio parameter and replaced with measured and cubic spline fit error gain curve (measured with scope on output side of servo (motor-decoupled))
+# Also using BAM new max velocity parameter
+# Restricting kT (torque constant) parameter close to it's specsheet 1.08
+# Skipping all Lift and Drop trajectories
+####################
+
+--- [M1] --- [ID009]
+[Trial 4997, Best score: 0.021378370070028994]
+Best params found (saved to params/id009-params/m1.json): 
+- kt: 1.0000000244338463 (min: 1.0, max: 1.1)
+- R: 2.2136477795617733 (min: 0.9, max: 10.0)
+- armature: 0.039999999991812 (min: 1e-05, max: 0.04)
+- q_offset: -0.09927751326955606 (min: -0.1, max: 0.1)
+- max_velocity: 4.855763772519988 (min: 0.521553467881118, max: 52.1553467881118)
+- friction_base: 0.16197241014297026 (min: 0.0, max: 0.2)
+- friction_viscous: 0.7787661305958586 (min: 0.0, max: 1.0)
+- score: 0.021378370070028994
+- trial_number: 4997
+- model: m1
+- actuator: sts3215_12v
+
+--- [M2] --- [ID009]
+[Trial 4998, Best score: 0.020926517458359967]
+Best params found (saved to params/id009-params/m2.json): 
+- kt: 1.0950300307574103 (min: 1.0, max: 1.1)
+- R: 2.366165645758277 (min: 0.9, max: 10.0)
+- armature: 0.03999999949397684 (min: 1e-05, max: 0.04)
+- q_offset: -0.07540444427696204 (min: -0.1, max: 0.1)
+- max_velocity: 4.907401805962473 (min: 0.521553467881118, max: 52.1553467881118)
+- friction_base: 0.06162420445072512 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.18507420604248617 (min: 0.0, max: 0.2)
+- dtheta_stribeck: 0.23881223276014807 (min: 0.01, max: 3.0)
+- alpha: 1.8394716018299597 (min: 0.5, max: 3.0)
+- friction_viscous: 0.8064484112265125 (min: 0.0, max: 1.0)
+- score: 0.020926517458359967
+- trial_number: 4998
+- model: m2
+- actuator: sts3215_12v
+
+--- [M3] --- [ID009]
+[Trial 4997, Best score: 0.021246665927139845]
+Best params found (saved to params/id009-params/m3.json): 
+- kt: 1.0999999973004206 (min: 1.0, max: 1.1)
+- R: 2.322794922512548 (min: 0.9, max: 10.0)
+- armature: 0.039999999988233254 (min: 1e-05, max: 0.04)
+- q_offset: -0.09042022354598317 (min: -0.1, max: 0.1)
+- max_velocity: 4.793464198985616 (min: 0.521553467881118, max: 52.1553467881118)
+- friction_base: 0.13098353578359087 (min: 0.0, max: 0.2)
+- load_friction_base: 0.041141448249101265 (min: 0.0, max: 0.5)
+- friction_viscous: 0.7401752058407742 (min: 0.0, max: 1.0)
+- score: 0.021246665927139845
+- trial_number: 4997
+- model: m3
+- actuator: sts3215_12v
+
+--- [M4] --- [ID009]
+
+[Trial 4997, Best score: 0.020638533119719558]
+Best params found (saved to params/id009-params/m4.json): 
+- kt: 1.0446579219167214 (min: 1.0, max: 1.1)
+- R: 2.0840697747080137 (min: 0.9, max: 10.0)
+- armature: 0.039999999155452624 (min: 1e-05, max: 0.04)
+- q_offset: -0.04610349348555644 (min: -0.1, max: 0.1)
+- max_velocity: 4.864779778214403 (min: 0.521553467881118, max: 52.1553467881118)
+- friction_base: 3.0032291239827257e-06 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.08661404169973336 (min: 0.0, max: 0.2)
+- load_friction_base: 1.904439457295693e-06 (min: 0.0, max: 0.5)
+- load_friction_stribeck: 0.10820868529881401 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.5638390003640228 (min: 0.01, max: 3.0)
+- alpha: 1.213629906766317 (min: 0.5, max: 3.0)
+- friction_viscous: 0.9185984656923778 (min: 0.0, max: 1.0)
+- score: 0.020638533119719558
+- trial_number: 4997
+- model: m4
+- actuator: sts3215_12v
+
+--- [M5] --- [ID009]
+[Trial 4997, Best score: 0.01998821524119558]
+Best params found (saved to params/id009-params/m5.json): 
+- kt: 1.0819869946422513 (min: 1.0, max: 1.1)
+- R: 1.8359197122112791 (min: 0.9, max: 10.0)
+- armature: 0.03998628909240503 (min: 1e-05, max: 0.04)
+- q_offset: -0.07761642412796757 (min: -0.1, max: 0.1)
+- max_velocity: 4.907263537201201 (min: 0.521553467881118, max: 52.1553467881118)
+- friction_base: 0.03302362065368591 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.19928033641990042 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.28288079537412547 (min: 0.0, max: 0.5)
+- load_friction_external: 0.00020184159503406748 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.000241819659811935 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.48683671322105143 (min: 0.0, max: 1.0)
+- dtheta_stribeck: 0.07137730977527917 (min: 0.01, max: 3.0)
+- alpha: 2.095414126206621 (min: 0.5, max: 3.0)
+- friction_viscous: 0.7383993734999358 (min: 0.0, max: 1.0)
+- score: 0.01998821524119558
+- trial_number: 4997
+- model: m5
+- actuator: sts3215_12v
+
+--- [M6] --- [ID009]
+[Trial 4996, Best score: 0.020276327009747172]
+Best params found (saved to params/id009-params/m6.json): 
+- kt: 1.0800173143335097 (min: 1.0, max: 1.1)
+- R: 1.908283740979889 (min: 0.9, max: 10.0)
+- armature: 0.039994384773636704 (min: 1e-05, max: 0.04)
+- q_offset: -0.05882363430014304 (min: -0.1, max: 0.1)
+- max_velocity: 4.845218090263473 (min: 0.521553467881118, max: 52.1553467881118)
+- friction_base: 0.0 (min: 0.0, max: 0.2)
+- friction_stribeck: 0.07797341931693492 (min: 0.0, max: 0.2)
+- load_friction_motor: 0.21076392335800398 (min: 0.0, max: 0.5)
+- load_friction_external: 0.0008628485081596545 (min: 0.0, max: 0.5)
+- load_friction_motor_stribeck: 0.0009273983888352041 (min: 0.0, max: 1.0)
+- load_friction_external_stribeck: 0.10046938652072804 (min: 0.0, max: 1.0)
+- load_friction_motor_quad: 0.0032767449467591366 (min: 0.0, max: 0.01)
+- load_friction_external_quad: 0.006080150114130404 (min: 0.0, max: 0.01)
+- dtheta_stribeck: 1.190483017067651 (min: 0.01, max: 3.0)
+- alpha: 0.6108952156083284 (min: 0.5, max: 3.0)
+- friction_viscous: 0.7812606447858756 (min: 0.0, max: 1.0)
+- score: 0.020276327009747172
+- trial_number: 4996
+- model: m6
+- actuator: sts3215_12v

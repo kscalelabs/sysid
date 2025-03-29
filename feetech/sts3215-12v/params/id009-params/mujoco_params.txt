@@ -1,0 +1,68 @@
+--- [ M1 ] ---
+Reading model of type m1 from params/id009-params/m1.json                                                                                                                                                                                                                   
+Parameters export for MuJoCo, actuator sts3215_12v                                                                                           
+- forcerange: 5.466091040935576                                                                                                              
+- armature: 0.039999999991812
+- kp: 28.823835880364374
+- damping: 1.2305092028680242
+- frictionloss: 0.16197241014297026
+
+--- [ M2 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m2)
+
+Reading model of type m2 from params/id009-params/m2.json
+
+Parameters export for MuJoCo, actuator sts3215_12v
+- forcerange: 5.599719274057216
+- armature: 0.03999999949397684
+- kp: 29.52848536966779
+- damping: 1.3132137640284742
+- frictionloss: 0.06162420445072512
+
+--- [ M3 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m3)
+
+Reading model of type m3 from params/id009-params/m3.json
+
+Parameters export for MuJoCo, actuator sts3215_12v
+- forcerange: 5.7301657750042665
+- armature: 0.039999999988233254
+- kp: 30.21635692290522
+- damping: 1.2610993659263656
+- frictionloss: 0.13098353578359087
+
+--- [ M4 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m4)
+
+Reading model of type m4 from params/id009-params/m4.json
+
+Parameters export for MuJoCo, actuator sts3215_12v
+- forcerange: 6.065229201341539
+- armature: 0.039999999155452624
+- kp: 31.983216116784487
+- damping: 1.4422422453140364
+- frictionloss: 3.0032291239827257e-06
+
+--- [ M5 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m5)
+
+Reading model of type m5 from params/id009-params/m5.json
+
+Parameters export for MuJoCo, actuator sts3215_12v
+- forcerange: 7.131054015103139
+- armature: 0.03998628909240503
+- kp: 37.603532221842634
+- damping: 1.3760611670894403
+- frictionloss: 0.03302362065368591
+
+--- [ M6 ] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m6)
+
+Reading model of type m6 from params/id009-params/m6.json
+
+Parameters export for MuJoCo, actuator sts3215_12v
+- forcerange: 6.848148010067435
+- armature: 0.039994384773636704
+- kp: 36.11170996757536
+- damping: 1.3925101011488012
+- frictionloss: 0.0
