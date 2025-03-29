@@ -1,0 +1,69 @@
+Reading model of type m1 from params/id008-params/m1.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 8.716130441407099
+- armature: 0.03999977737144798
+- kp: 45.53297645165114
+- damping: 1.3464038511725651
+- frictionloss: 0.19999504581400715
+
+--- [M2] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m2)
+
+Reading model of type m2 from params/id008-params/m2.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 9.307226567958365
+- armature: 0.039999854016697936
+- kp: 48.62085658284569
+- damping: 1.4289385754484005
+- frictionloss: 0.19999573732746345
+
+--- [M3] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m3)
+
+Reading model of type m3 from params/id008-params/m3.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 9.585858372857107
+- armature: 0.039999999931445394
+- kp: 50.07642628736326
+- damping: 1.4154654481575422
+- frictionloss: 0.18851447043129377
+
+--- [M4] ---
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m4)
+
+Reading model of type m4 from params/id008-params/m4.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 9.63589850798198
+- armature: 0.03999993784945623
+- kp: 50.33783544244589
+- damping: 1.491919291543865
+- frictionloss: 0.12306058061477232
+
+--- [M5] ---1 can't be exported exactly to MuJoCo (model is m5)
+
+Reading model of type m5 from params/id008-params/m5.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 10.555065791725605
+- armature: 0.039997893991326514
+- kp: 55.13955594986296
+- damping: 1.4776019840048091
+- frictionloss: 0.14063782817058204
+
+(bam) scott@r2max4 sts3250 % python -m bam.to_mujoco --params params/id008-params/m6.json --vin 12.1 --kp 32
+WARNING: Model other than m1 can't be exported exactly to MuJoCo (model is m6)
+
+
+--- [M6] ---
+Reading model of type m6 from params/id008-params/m6.json
+
+Parameters export for MuJoCo, actuator sts3250
+- forcerange: 9.930126713930377
+- armature: 0.03999986750770299
+- kp: 51.8748805868388
+- damping: 1.5219860489374981
+- frictionloss: 0.04978016152808182
