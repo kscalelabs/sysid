@@ -12,44 +12,31 @@ from scipy.interpolate import UnivariateSpline
 ############## This is a temporary utility, please do not judge too harshly ##############
 ########################################################################################
 
-def create_error_gain_function(csv_file):
+def create_error_gain_function(actuator_params):
     """
-    Reads error gain data from a CSV file, fits a cubic spline to the data,
-    and returns a function that calculates the error gain for a given position error in radians.
+    Creates error gain function from actuator parameters.
     
     Parameters:
-        csv_file (str): Path to the CSV file containing the data.
+        actuator_params (dict): Actuator parameters including error_gain_data
         
     Returns:
-        function: A function that takes a position error in radians (scalar or array-like)
-                  and returns the corresponding error gain. If the position error is outside the 
-                  domain of the dataset, the function returns the saturation value (min or max error gain).
+        function: A function that takes a position error in radians and returns the error gain
     """
-    # Load CSV file with extra spaces in header handled
-    data = pd.read_csv(csv_file, skipinitialspace=True)
-    x = data['pos_err'].values  # position error in radians
-    y = data['error_gain'].values
+    # Extract error gain data from params
+    data_points = actuator_params["error_gain_data"]
+    x = np.array([d["pos_err"] for d in data_points])
+    y = np.array([d["error_gain"] for d in data_points])
 
     # Sort the data by x (required for spline fitting)
     sorted_indices = np.argsort(x)
     x = x[sorted_indices]
     y = y[sorted_indices]
 
-    # Fit a cubic spline (k=3) with s=0 to interpolate the data exactly.
+    # Fit a cubic spline (k=3) with s=0 to interpolate the data exactly
     spline = UnivariateSpline(x, y, s=0, k=3)
 
     def error_gain_radians(radian_value):
-        """
-        Returns the error gain for the provided position error in radians.
-        
-        Parameters:
-            radian_value (float or array-like): The position error in radians.
-            
-        Returns:
-            float or np.ndarray: The error gain computed by the spline. If the input is beyond the
-            domain of the data, the function returns the corresponding saturation value.
-        """
-        # Convert the input to a NumPy array (if it isn't already)
+        """Returns the error gain for the provided position error in radians."""
         radian_value = np.asarray(radian_value)
         
         # Determine the bounds of the dataset
@@ -59,28 +46,21 @@ def create_error_gain_function(csv_file):
         # Compute the spline value normally
         spline_val = spline(radian_value)
         
-        # Saturate the spline output: if radian_value is less than x_min or greater than x_max,
-        # return the corresponding min or max error_gain from the dataset.
+        # Saturate the spline output
         saturated = np.where(radian_value < x_min, y[0], spline_val)
         saturated = np.where(radian_value > x_max, y[-1], saturated)
         
-        # If the input was scalar, return a scalar.
-        if saturated.shape == ():
-            return saturated.item()
-        return saturated
+        return saturated.item() if saturated.shape == () else saturated
     
-    #print("Not Saturated: !")
     return error_gain_radians
 
 
 
-def run_sim(log, errorgain_file):
+def run_sim(log, actuator_params):
     """
-    Run simulation based on a given log dictionary.
-    Returns simulation timestamps, simulated positions, real positions,
-    goal positions, simulated torque commands, RMSE, and the kp value.
+    Run simulation based on a given log dictionary and actuator parameters.
     """
-    error_gain = create_error_gain_function(errorgain_file)
+    error_gain = create_error_gain_function(actuator_params)
 
     entries = log["entries"]
     timestamps = np.array([e["timestamp"] for e in entries])
@@ -89,52 +69,21 @@ def run_sim(log, errorgain_file):
     torque_enabled_array = np.array([e["torque_enable"] for e in entries])
     dt = log["dt"]
 
-    # --- Controller & Plant Parameters ---
-    K_P = log.get("kp", 16)  # Extract kp from the log file
+    # Extract K_P from log
+    K_P = log.get("kp", 16)
     print(f"K_P: {K_P}")
-    """
-    Parameters export for MuJoCo, actuator sts3250
-    - forcerange: 8.716130441407099
-    - armature: 0.03999977737144798
-    - kp: 45.53297645165114
-    - damping: 1.3464038511725651
-    - frictionloss: 0.19999504581400715
 
+    # Use parameters from actuator config
+    max_torque = actuator_params["max_torque"]
+    armature = actuator_params["armature"]
+    damping = actuator_params["damping"]
+    frictionloss = actuator_params["frictionloss"]
+    max_velocity = actuator_params.get("max_velocity", 10.0)  # Default if not specified
+    max_pwm = actuator_params.get("max_pwm", 0.99981)  # Default if not specified
+    vin = actuator_params["vin"]
+    kt = actuator_params["kt"]
+    R = actuator_params["R"]
 
-    Parameters export for MuJoCo, actuator sts3215_12v
-    - forcerange: 5.510764878546495
-    - armature: 0.025896903176634425
-    - kp: 29.07744066635301
-    - damping: 1.1793454779199242
-    - frictionloss: 0.11434146818509992
-    - error_gain: 0.164787755
-    """
-
-    
-    # TODO: store and read these from a config file
-    
-    #3250
-    #max_torque = 8.716130441407099
-    #armature = 0.03999977737144798
-    #damping = 1.3464038511725651
-    #frictionloss = 0.19999504581400715
-    #max_velocity = 8.93762009169868
-    #max_pwm=0.99981
-    #vin = 12.1
-    #kt = 1.0005874626213263
-    #R = 1.3890462492623645
-    
-
-    #3215    
-    max_torque = 5.466091040935576  
-    armature = 0.039999999991812
-    damping = 1.2305092028680242
-    frictionloss = 0.16197241014297026
-    max_velocity = 4.855763772519988
-    max_pwm=0.99981
-    vin = 12.1
-    kt =  1.0000000244338463
-    R = 2.2136477795617733
 
     # --- Determine the proper model file based on mass and length ---
     # TODO: Hacks, need to fix current data set (no arm_mass)
@@ -207,13 +156,11 @@ def run_sim(log, errorgain_file):
             duty = np.clip(K_P * error_gain(error) * error, -max_pwm, max_pwm)
             volts = duty * vin
             torque = volts * kt / R
-
             sim_volts.append(volts)           
         else:
-            # TODO: This might not be super interesting, we would never operate a robot with servo disabled ?? right??
+            # disable damping and friction when torque is not enabled (trying to simulate de-energized actuator)
             torque = 0.0
             sim_volts.append(0.0)
-            # disable damping and friction when torque is not enabled (trying to simulate de-energized actuator)
             model.dof_damping[dof_id] = 0.0
             model.dof_frictionloss[dof_id] = 0.0
 
@@ -226,11 +173,10 @@ def run_sim(log, errorgain_file):
     sim_positions = np.array(sim_positions)
     rmse = np.sqrt(np.mean((sim_positions - real_positions) ** 2))
 
-    #return timestamps, sim_positions, real_positions, goal_positions, sim_ctrls, rmse, K_P
     return timestamps, sim_positions, real_positions, goal_positions, sim_ctrls, sim_volts, rmse, K_P
 
 
-def create_subplot(log, axes, show_kp=False, kp=None, errorgain_file=None):
+def create_subplot(log, axes, show_kp=False, kp=None, errorgain_file=None, actuator_params=None):
     """
     Helper to create a group of three subplots in a single cell of the grouped grid.
     It runs the simulation for a given log (already loaded) and plots:
@@ -246,7 +192,7 @@ def create_subplot(log, axes, show_kp=False, kp=None, errorgain_file=None):
         errorgain_file (str): Path to the CSV file with error gain data.
     """
     # Now unpacking 9 values from run_sim:
-    t, sim_pos, real_pos, goal_pos, sim_ctrls, sim_volts, rmse, _ = run_sim(log, errorgain_file)
+    t, sim_pos, real_pos, goal_pos, sim_ctrls, sim_volts, rmse, _ = run_sim(log, actuator_params)
     
     # --- Positions subplot ---
     axes[0].plot(t, sim_pos, label="Sim Pos", linewidth=0.5)
@@ -263,8 +209,6 @@ def create_subplot(log, axes, show_kp=False, kp=None, errorgain_file=None):
     axes[1].tick_params(axis="both", which="major", labelsize=6)
     axes[1].grid(True, linewidth=0.5)
     axes[1].legend(fontsize=6, loc="upper right")
-
-
 
 
 def group_logs_by_params(logs):
@@ -322,7 +266,7 @@ def group_logs_by_params(logs):
 
 
 
-def build_grouped_pdf_plotbook(logdir, errorgain_file, output_pdf="sim_plotbook.pdf", mass=None, length=None):
+def build_grouped_pdf_plotbook(logdir, actuator_params, output_pdf="sim_plotbook.pdf", mass=None, length=None):
     """
     Grouped mode: Load all JSON files (optionally filtered by mass and length),
     group them by length, trajectory, mass, and kp with up to 4 repetitions per (mass, kp) combo,
@@ -395,7 +339,7 @@ def build_grouped_pdf_plotbook(logdir, errorgain_file, output_pdf="sim_plotbook.
                         if log_entry is not None:
                             # Pass the two axes as a list to create_subplot.
                             create_subplot(log_entry, [ax_pos, ax_volt],
-                                           show_kp=(i == 0), kp=kp_val, errorgain_file=errorgain_file)
+                                           show_kp=(i == 0), kp=kp_val, actuator_params=actuator_params)
                         else:
                             ax_pos.set_title(f'kp={kp_val}\nN/A', fontsize=8)
                         
@@ -414,21 +358,31 @@ def build_grouped_pdf_plotbook(logdir, errorgain_file, output_pdf="sim_plotbook.
     print(f"Grouped PDF plotbook saved to {output_pdf}")
 
 
-
-
 def main():
     parser = argparse.ArgumentParser(
         description="Modular simulation harness and PDF plotbook generator"
     )
     parser.add_argument("--logdir", type=str, required=True,
                         help="Directory containing trajectory JSON files")
-    parser.add_argument("--errorgain_data", type=str, required=True,
-                        help="csv file containing error gain data")
-    parser.add_argument("--output", type=str, default="sim_plotbook.pdf",
+    parser.add_argument("--actuator_model", type=Path, required=True,
+                        help="Path to actuator model JSON configuration file")
+    parser.add_argument("--output", type=str, default="sysid_testbed_validation.pdf",
                         help="Output PDF file name")
 
     args = parser.parse_args()
-    build_grouped_pdf_plotbook(args.logdir, args.errorgain_data, args.output)
+
+    # Load actuator parameters from config file
+    try:
+        with open(args.actuator_model, "r") as f:
+            actuator_params = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: Actuator model configuration file not found: {args.actuator_model}")
+        return
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON in actuator model configuration file: {args.actuator_model}")
+        return
+
+    build_grouped_pdf_plotbook(args.logdir, actuator_params, args.output)
 
 if __name__ == "__main__":
     main()
